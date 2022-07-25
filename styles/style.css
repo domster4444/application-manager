@@ -1,0 +1,293 @@
+/* global  */
+
+/* //? Global Font 40-500-600-700 */
+/* font-family: 'Montserrat', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* variable */
+:root {
+  font-size: 10px;
+  --secondary-grey: #717171;
+  --primary-red: #ff0000;
+  --primary-blue: #0f5288;
+  --primary-black: #000000;
+  --primary-white: #ffffff;
+  --secondary-blue: #80b5d8;
+}
+
+/* =============== font families  */
+.mont_400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.mont_500 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.mont_600 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.mont_700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* =====================Shared  */
+.primary-btn,
+.secondary-btn {
+  border-radius: 0.35rem;
+}
+.secondary-btn {
+  border: none;
+  padding: 0.95rem 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  color: var(--primary-white);
+  background-color: var(--secondary-blue);
+  font-size: 1.7rem;
+}
+
+.primary-btn {
+  padding: 0.95rem 1.9rem;
+  color: var(--primary-white);
+  background-color: var(--primary-blue);
+  font-size: 2rem;
+}
+
+/* ============create-account-screen============ */
+
+nav.create-account_nav {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0rem;
+}
+
+nav.create-account_nav img {
+  height: 6rem;
+}
+
+#create-account .form_container {
+  display: flex;
+  justify-content: center;
+}
+
+#create-account .create-account_form {
+  width: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: var(--primary-white);
+  padding: 4rem 1rem;
+  border-radius: 0.35rem;
+}
+
+#create-account {
+  position: relative;
+}
+
+#create-account main {
+  position: relative;
+}
+
+#create-account #ellipse-illustrator {
+  top: -8vw;
+  position: absolute;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1390px) {
+  #create-account #ellipse-illustrator {
+    top: 0vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #create-account #ellipse-illustrator {
+    display: none;
+  }
+  body {
+    background: var(--secondary-blue);
+  }
+}
+
+.create-account_form {
+  margin-bottom: 2rem;
+}
+
+.create-account_form header h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--primary-blue);
+}
+
+.create-account_form p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--secondary-grey);
+}
+/* required star in form label */
+.required {
+  color: var(--primary-red);
+}
+
+.form-division_container {
+  display: flex;
+}
+.form-division_container .left_division {
+  display: flex;
+  flex-direction: column;
+}
+.form-division_container .right_division {
+}
+.form-division_container .left_division {
+  margin-right: 5rem;
+
+  /* //! explicit margin right used , to be mitigated later */
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.create-account_form label {
+  align-items: center;
+  margin-top: 1.4rem;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.create-account_form input {
+  border: 1px solid var(--secondary-blue);
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  width: 25rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  outline: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .create-account_form input {
+    height: 4rem;
+    font-size: 1.8rem;
+  }
+}
+
+.create-account_form input:hover {
+  border: 2px solid var(--primary-blue);
+}
+
+.create-account_form input:focus {
+  border: 2px solid var(--primary-blue);
+}
+.form-container {
+  margin-top: 2rem;
+  /* background-color: red; */
+}
+.form-container form header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.form-container form header strong {
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--primary-black);
+}
+.form-container .primary-btn {
+  margin-top: 4rem;
+}
+
+.form-btn_container {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1390px) {
+  #create-account .create-account_form {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #create-account .create-account_form {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #create-account .create-account_form label {
+    flex-direction: column;
+  }
+  #create-account .create-account_form {
+    width: 90%;
+  }
+  .secondary-btn {
+    margin-top: 2rem;
+  }
+  .form-division_container {
+    flex-direction: column;
+  }
+  .form-btn_container {
+    display: block;
+  }
+  .form-btn_container .primary-btn {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* shift label text to left most */
+  .create-account_form label {
+    align-items: flex-start;
+  }
+  .form-container {
+    justify-content: flex-start;
+  }
+  .create-account_form input {
+    width: 100%;
+    height: 5rem;
+  }
+  .create-account_form input:placeholder-shown {
+    font-size: 1.8rem;
+  }
+  .create-account_form label,
+  .form-division_container .left_division {
+    width: 100%;
+  }
+
+  .form-btn_container {
+    width: 100%;
+  }
+
+  .form-container form {
+    width: 100%;
+  }
+  .form-container form .primary-btn {
+    width: 100%;
+  }
+}
+
+/* ========================  change password  */
