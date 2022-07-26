@@ -145,7 +145,10 @@ nav.create-account_nav img {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: var(--primary-white);
   /* padding: 4rem 1rem; */
-  padding: 6rem 6rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 10rem !important;
   border-radius: 0.35rem;
 }
 
@@ -401,22 +404,13 @@ nav.create-account_nav img {
   border-radius: 50%;
 }
 
-.blueCircle {
-  box-shadow: 0px 10px 30px 0px var(--secondary-blue);
-  background-image: linear-gradient(
-    40deg,
-    var(--primary-blue) 0%,
-    #38d0fc 100%
-  );
-}
-
 .primary-blue-gradient {
   box-shadow: 0px 10px 30px 0px var(--secondary-blue);
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     40deg,
     var(--primary-blue) 0%,
     #38d0fc 100%
-  );
+  ); */
 }
 
 .reset-password-screen .blob_container {
@@ -488,7 +482,20 @@ nav.create-account_nav img {
 }
 
 .create-account_form button {
-  width: 100%;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 40%;
+}
+
+@media only screen and (max-width: 900px) {
+  .create-account_form button {
+    position: relative;
+    width: 100%;
+  }
+}
+.create-account_form button {
+  border-radius: 0px;
 }
 
 .primary-btn {
