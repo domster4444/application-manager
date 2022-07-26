@@ -22,6 +22,9 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+input {
+  color: var(--primary-blue);
+}
 button {
   border: none;
   outline: none;
@@ -38,9 +41,10 @@ button:active {
 /* variable */
 :root {
   font-size: 10px;
-  --secondary-grey: #717171;
+  --secondary-grey: #a3a3a3;
   --primary-red: #ff0000;
   --primary-blue: #0f5288;
+  --primary-blue-light: rgba(15, 82, 136, 0.8);
   --primary-black: #000000;
   --primary-white: #ffffff;
   --secondary-blue: #80b5d8;
@@ -48,19 +52,41 @@ button:active {
 
 /* =============== font families  */
 .mont_400 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-weight: 400;
 }
 .mont_500 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-weight: 500;
 }
 .mont_600 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
   font-weight: 600;
 }
 .mont_700 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-weight: 700;
+}
+
+.playfair_400 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+.playfair_500 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+.playfair_600 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+.playfair_700 {
+  font-family: "Playfair Display", serif;
   font-weight: 700;
 }
 
@@ -76,8 +102,11 @@ button:active {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   color: var(--primary-white);
-  background-color: var(--secondary-blue);
+  background-color: var(--primary-blue-light);
   font-size: 1.7rem;
+}
+.secondary-btn:hover {
+  background-color: var(--primary-blue);
 }
 
 .primary-btn,
@@ -112,13 +141,17 @@ nav.create-account_nav img {
 }
 
 #account .create-account_form {
-  width: 50%;
+  /* width: 50%; */
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: var(--primary-white);
-  padding: 4rem 1rem;
+  /* padding: 4rem 1rem; */
+  padding: 6rem 6rem;
   border-radius: 0.35rem;
 }
 
+#account input {
+  height: 4rem;
+}
 #account {
   position: relative;
 }
@@ -154,12 +187,12 @@ nav.create-account_nav img {
 
 .create-account_form header h2 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   color: var(--primary-blue);
 }
 
 .create-account_form p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 1.6rem;
   color: var(--secondary-grey);
@@ -177,7 +210,11 @@ nav.create-account_nav img {
   flex-direction: column;
 }
 .form-division_container .right_division {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
+
 .form-division_container .left_division {
   margin-right: 5rem;
 
@@ -233,7 +270,7 @@ nav.create-account_nav img {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: var(--primary-black);
+  color: var(--primary-blue);
 }
 .form-container .primary-btn {
   margin-top: 4rem;
@@ -246,13 +283,13 @@ nav.create-account_nav img {
 
 @media only screen and (max-width: 1390px) {
   #account .create-account_form {
-    width: 70%;
+    /* width: 70%; */
   }
 }
 
 @media only screen and (max-width: 850px) {
   #account .create-account_form {
-    width: 80%;
+    /* width: 80%; */
   }
 }
 @media only screen and (max-width: 750px) {
@@ -260,7 +297,11 @@ nav.create-account_nav img {
     flex-direction: column;
   }
   #account .create-account_form {
-    width: 90%;
+    width: 95%;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 5rem;
   }
   .secondary-btn {
     margin-top: 2rem;
@@ -278,6 +319,9 @@ nav.create-account_nav img {
   }
 }
 
+.create-account_form input::placeholder {
+  font-size: 1.4rem;
+}
 @media only screen and (max-width: 500px) {
   /* shift label text to left most */
   .create-account_form label {
@@ -289,9 +333,6 @@ nav.create-account_nav img {
   .create-account_form input {
     width: 100%;
     height: 5rem;
-  }
-  .create-account_form input:placeholder-shown {
-    font-size: 1.8rem;
   }
   .create-account_form label,
   .form-division_container .left_division {
@@ -344,4 +385,124 @@ nav.create-account_nav img {
   .create-account_form label {
     align-items: flex-start;
   }
+}
+
+/* ================== change password  =====================  */
+/* 
+.change-password-screen{
+
+}
+ */
+
+.icon-circular-blob {
+  height: 8rem;
+  width: 8rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.blueCircle {
+  box-shadow: 0px 10px 30px 0px var(--secondary-blue);
+  background-image: linear-gradient(
+    40deg,
+    var(--primary-blue) 0%,
+    #38d0fc 100%
+  );
+}
+
+.primary-blue-gradient {
+  box-shadow: 0px 10px 30px 0px var(--secondary-blue);
+  background-image: linear-gradient(
+    40deg,
+    var(--primary-blue) 0%,
+    #38d0fc 100%
+  );
+}
+
+.reset-password-screen .blob_container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.reset-password-screen .blob_container .icon-circular-blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-password-screen .left_division {
+  margin: 0;
+}
+.reset-password-screen .blob_container .icon-circular-blob i {
+  font-size: 5rem;
+  color: var(--primary-white);
+}
+.reset-password-screen .form-container .primary-btn {
+  margin-top: 2rem;
+}
+.reset-password-screen .form-container p {
+  margin-top: 2rem;
+}
+.reset-password-screen .form-container input {
+  width: 100%;
+}
+
+#account input {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+}
+#account input:hover,
+#account input:active,
+#account input:focus {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+.create-account_form {
+  position: relative;
+}
+.create-account_form footer {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+}
+
+.create-account_form footer a {
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+
+.create-account_form footer a span:hover {
+  text-decoration: underline;
+}
+
+/* unvisited link */
+.create-account_form footer a:link {
+  color: var(--primary-blue);
+}
+/* unvisited link */
+.create-account_form footer a:visited {
+  color: var(--primary-blue);
+}
+
+.create-account_form button {
+  width: 100%;
+}
+
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p i {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+footer p a {
+  display: flex;
+  align-items: center;
 }
