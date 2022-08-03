@@ -40,11 +40,13 @@ button:active {
   font-size: 10px;
   --secondary-grey: #a3a3a3;
   --primary-red: #ff0000;
+  --primary-orange: #f85320;
   --primary-blue: #0f5288;
   --primary-blue-light: rgba(15, 82, 136, 0.8);
   --primary-black: #000000;
   --primary-white: #ffffff;
   --secondary-blue: #80b5d8;
+  --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
 }
 
 /* poppins font import  @100;300;400;500;600 */
@@ -124,13 +126,14 @@ nav.create-account_nav img {
 }
 
 #account .create-account_form {
-  width: 50%;
+  min-width: 50%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: var(--primary-white);
   /* padding: 4rem 1rem; */
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+
   border-radius: 0.35rem;
   padding-bottom: 5rem !important;
 }
@@ -503,4 +506,226 @@ footer p a {
   /* display: none; */
   font-size: 1.5rem;
   padding: 0.35rem 0.75rem;
+}
+
+/* =======================================================application form for bca screen styling starts from here  */
+
+.timeline {
+  padding-bottom: 4rem;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-block {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: red; */
+  width: 65%;
+}
+
+.timeline-block hr {
+  /* display: none; */
+  transform: translateX(-50%);
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  width: 75%;
+  border: none;
+  height: 0.25rem;
+  background: var(--secondary-grey);
+}
+.timeline a {
+  z-index: 100;
+  text-decoration: none;
+}
+
+.step-count-circle {
+  position: relative;
+  border: 1rem solid var(--primary-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 0.25rem;
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border-radius: 50%;
+}
+
+.step1-after-txt:after {
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Personal Information";
+  font-size: 1.4rem;
+}
+
+.step2-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Education History";
+}
+.step3-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Documents";
+}
+.step4-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Declaration & Consent";
+}
+
+/* 
+.timeline .step-count-line {
+} */
+
+.detail-row-section {
+  margin-top: 5rem;
+  /* background: red; */
+
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 900px) {
+  .detail-row-section {
+    width: 100%;
+  }
+}
+
+.detail-row-section h4 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.detail-row-division {
+  display: flex;
+  justify-content: space-between;
+  /* background: green; */
+}
+
+.detail-col {
+  font-size: 3rem;
+  width: 33.33%;
+}
+.detail-col input {
+  margin: 1rem 0rem;
+  width: 90%;
+}
+
+#account input[type="radio"] {
+  height: auto;
+}
+
+.gender-field {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gender-field span {
+  font-size: 1.6rem;
+}
+.gender-field label {
+  font-size: 1.4rem;
+  margin: 0rem 1rem;
+}
+.gender-field label input {
+  margin: 1rem;
+}
+
+.application-form-footer {
+  margin: 2rem 0rem;
+}
+
+.application-form-screen {
+  padding-bottom: 5rem;
+}
+
+/* application for for bca - footer   */
+
+.application-form-footer {
+  width: 95%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-form-footer p {
+  color: var(--primary-orange);
+}
+/* proceed backward || proceed forward button for footer */
+.application-form-footer .proceed-btn {
+  font-size: 1.6rem;
+  /* margin: 1rem; */
+  padding: 0.5rem;
+  color: var(--primary-black);
+  background-color: var(--primary-cyan);
+}
+
+.footer-btn-container {
+  /* margin-bottom: 2rem; */
+  padding-right: 2rem;
+}
+
+.application-form-screen .create-account_form {
+  width: 80%;
+}
+
+.notice-container {
+  margin-top: 2.5rem;
+  width: 85%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  border: 1px solid var(--primary-orange);
+}
+.notice-container p {
+  color: var(--primary-black);
+  font-size: 1.5rem;
+}
+/*  ! application form 65% inner container for content body */
+.application-form-container {
+  width: 65%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+/* ====================== BCA FORM-  Documents Screen */
+/* 2 column detail-row-section */
+.two-col-detail-row-section .column-container {
+  display: flex;
+  justify-content: space-between;
+}
+.two-col-detail-row-section h4 {
+  color: green;
+  font-size: 2rem;
+}
+
+.two-col-detail-row-section .detail-col {
+  width: 50%;
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form-screen .create-account_form footer {
+    position: relative;
+  }
 }
