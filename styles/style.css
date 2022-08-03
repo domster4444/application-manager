@@ -1,8 +1,5 @@
 /* global  */
 
-/* //? Global Font 40-500-600-700 */
-/* font-family: 'Montserrat', sans-serif; */
-
 * {
   margin: 0;
   padding: 0;
@@ -50,44 +47,30 @@ button:active {
   --secondary-blue: #80b5d8;
 }
 
-/* =============== font families  */
-.mont_400 {
+/* poppins font import  @100;300;400;500;600 */
+
+.poppins_base {
   font-family: "Poppins", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
+}
+.poppins_100 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+.poppins_300 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.poppins_400 {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
-.mont_500 {
+.poppins_500 {
   font-family: "Poppins", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
   font-weight: 500;
 }
-.mont_600 {
+.poppins_600 {
   font-family: "Poppins", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
   font-weight: 600;
-}
-.mont_700 {
-  font-family: "Poppins", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
-  font-weight: 700;
-}
-
-.playfair_400 {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-}
-
-.playfair_500 {
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-}
-.playfair_600 {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-}
-.playfair_700 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
 }
 
 /* =====================Shared  */
@@ -141,15 +124,28 @@ nav.create-account_nav img {
 }
 
 #account .create-account_form {
-  /* width: 50%; */
+  width: 50%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: var(--primary-white);
   /* padding: 4rem 1rem; */
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  padding-bottom: 10rem !important;
   border-radius: 0.35rem;
+  padding-bottom: 5rem !important;
+}
+
+/* todo:  */
+@media only screen and (min-width: 900px) {
+  #account .create-account_form {
+    padding-bottom: 10rem !important;
+  }
+}
+
+@media (max-width: 1090px) {
+  #account .create-account_form {
+    width: fit-content !important;
+  }
 }
 
 #account input {
@@ -284,17 +280,6 @@ nav.create-account_nav img {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1390px) {
-  #account .create-account_form {
-    /* width: 70%; */
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  #account .create-account_form {
-    /* width: 80%; */
-  }
-}
 @media only screen and (max-width: 750px) {
   #account .create-account_form label {
     flex-direction: column;
@@ -391,26 +376,15 @@ nav.create-account_nav img {
 }
 
 /* ================== change password  =====================  */
-/* 
-.change-password-screen{
-
-}
- */
 
 .icon-circular-blob {
   height: 8rem;
   width: 8rem;
-  background-color: red;
   border-radius: 50%;
 }
 
 .primary-blue-gradient {
   box-shadow: 0px 10px 30px 0px var(--secondary-blue);
-  /* background-image: linear-gradient(
-    40deg,
-    var(--primary-blue) 0%,
-    #38d0fc 100%
-  ); */
 }
 
 .reset-password-screen .blob_container {
@@ -481,15 +455,21 @@ nav.create-account_nav img {
   color: var(--primary-blue);
 }
 
-.create-account_form button {
+.create-account_form .submit-btn {
   bottom: 0;
   right: 0;
   position: absolute;
   width: 40%;
 }
 
+@media only screen and (min-width: 900px) {
+  .create-account_form .submit-btn {
+    margin: 0rem 0.25rem 0.25rem 0rem;
+  }
+}
+
 @media only screen and (max-width: 900px) {
-  .create-account_form button {
+  .create-account_form .submit-btn {
     position: relative;
     width: 100%;
   }
@@ -512,4 +492,15 @@ footer p i {
 footer p a {
   display: flex;
   align-items: center;
+}
+
+#account button {
+  border-radius: 0.35rem;
+}
+
+.nav_btn-container .tertiary-btn,
+.nav_btn-container .primary-btn {
+  /* display: none; */
+  font-size: 1.5rem;
+  padding: 0.35rem 0.75rem;
 }
