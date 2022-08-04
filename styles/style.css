@@ -690,42 +690,71 @@ footer p a {
   width: 80%;
 }
 
-.notice-container {
-  margin-top: 2.5rem;
-  width: 85%;
-  transform: translateX(-50%);
-  margin-left: 50%;
-  border: 1px solid var(--primary-orange);
+.application-form-screen .create-account_form .notice-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 4rem;
 }
-.notice-container p {
+
+.notice {
+  width: 85%;
+  /* transform: translateX(-50%); */
+  /* margin-left: 50%; */
+  border: 1px solid var(--primary-orange);
+  border-radius: 0.25rem;
+  padding: 0.75rem 0rem;
+}
+.notice p {
   color: var(--primary-black);
   font-size: 1.5rem;
 }
 /*  ! application form 65% inner container for content body */
 .application-form-container {
-  width: 65%;
+  width: 85%;
   transform: translateX(-50%);
   margin-left: 50%;
 }
 
 /* ====================== BCA FORM-  Documents Screen */
 /* 2 column detail-row-section */
+
+.two-col-detail-row-section h4 {
+  margin-top: 5rem;
+  color: var(--primary-blue);
+  font-size: 2rem;
+}
+.two-col-detail-row-section h4 {
+  color: var(--primary-blue);
+  font-size: 2rem;
+}
+
 .two-col-detail-row-section .column-container {
   display: flex;
   justify-content: space-between;
 }
-.two-col-detail-row-section h4 {
-  color: green;
-  font-size: 2rem;
-}
 
 .two-col-detail-row-section .detail-col {
-  width: 50%;
-  border: 1px solid black;
+  width: 47%;
 }
 
 @media only screen and (max-width: 900px) {
   .application-form-screen .create-account_form footer {
     position: relative;
   }
+}
+
+.two-col-detail-row-section .detail-col .input-field-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem 0rem;
+}
+.two-col-detail-row-section .detail-col .input-field-container input {
+  width: 60%;
+  border: 2px solid var(--primary-blue);
+}
+
+.two-col-detail-row-section .detail-col .input-field-container label {
+  width: 40%;
+  font-size: 1.7rem;
 }
