@@ -342,9 +342,13 @@ nav.create-account_nav img {
 /* most classes in change password screen are shared from "create-account-page" styles */
 
 .secondary-toolbar {
-  padding: 0rem 10rem;
   margin-bottom: 2rem;
-  /* background-color: red; */
+}
+
+@media only screen and (max-width: 1160px) {
+  .secondary-toolbar {
+    width: 95%;
+  }
 }
 
 .secondary-toolbar .create-account_nav {
@@ -1833,7 +1837,13 @@ footer p a {
 }
 @media only screen and (max-width: 500px) {
   .login-screen .block {
-    width: 95%;
+    width: 95% !important;
+  }
+  .login-screen .block--right .submit-btn-container {
+    flex-wrap: wrap;
+  }
+  .login-screen .block--right .btn {
+    width: 100%;
   }
 }
 .login-screen .block p {
@@ -1916,4 +1926,23 @@ footer p a {
 
 .login-screen input:focus {
   border: 2px solid var(--primary-blue);
+}
+
+/* ================================================ Dashboard   */
+/*  below container reference is taken wrt to container of secondary-toolbar & secondary-toolbar-container */
+.secondary-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-block {
+  width: 110rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1160px) {
+  .secondary-block {
+    width: 95%;
+  }
 }
