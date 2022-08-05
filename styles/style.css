@@ -46,6 +46,7 @@ button:active {
   --primary-black: #000000;
   --primary-white: #ffffff;
   --secondary-blue: #80b5d8;
+  --primary-yellow: #e1da5e;
   --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
 }
 
@@ -676,6 +677,7 @@ footer p a {
 }
 /* proceed backward || proceed forward button for footer */
 .application-form-footer .proceed-btn {
+  margin: 0.5rem;
   font-size: 1.6rem;
   /* margin: 1rem; */
   padding: 0.5rem;
@@ -720,6 +722,12 @@ footer p a {
   width: 85%;
   transform: translateX(-50%);
   margin-left: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form-container {
+    width: 100%;
+  }
 }
 
 /* ====================== BCA FORM-  Documents Screen */
@@ -1742,3 +1750,170 @@ footer p a {
 }
 
 /* ===================== text editor lib styling ends here  */
+
+/* ================================================declaration screen =========================== */
+.declaration-body {
+  padding-top: 5rem;
+}
+
+.declaration-body .declaration-paragraph {
+  text-align: left;
+  color: var(--primary-black);
+}
+.declaration-body .declaration-title {
+  margin: 1.75rem 0rem;
+}
+
+.declaration-title {
+  font-size: 1.8rem;
+}
+.declaration-agreen-container {
+  margin: 5rem 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.declaration-body .checkbox-container {
+  display: inline;
+  width: fit-content;
+}
+.declaration-body .declaration-agreen-container input[type="checkbox"] {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.declaration-agreen-container .declaration-agreen-text {
+  margin-left: 0;
+  font-size: 1.8rem;
+  color: var(--primary-black);
+  font-weight: bold;
+}
+
+/* ========================================== login screen  */
+
+.login-screen {
+}
+
+.login-screen .primary-title {
+  color: white;
+  font-size: 3.75rem;
+  text-align: center;
+}
+
+.login-screen .two-col-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .login-screen .two-col-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .login-screen .two-col-container .block--left {
+    display: none;
+  }
+}
+
+.login-screen .two-col-container .block {
+  width: 40rem;
+  margin: 2rem;
+  /* border: 1px solid red; */
+  border-radius: 0.35rem;
+  padding: 7rem 3rem;
+}
+@media only screen and (max-width: 900px) {
+  .login-screen .block {
+    margin: 1rem;
+    width: 80%;
+    padding: 5rem 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login-screen .block {
+    width: 95%;
+  }
+}
+.login-screen .block p {
+  font-size: 1.7rem;
+}
+.login-screen .block--left {
+  background-color: var(--primary-blue);
+}
+.login-screen .block--left p span {
+  color: var(--primary-yellow);
+}
+.login-screen .block--left a {
+  text-decoration: none;
+}
+.login-screen .block--left p {
+  color: var(--primary-white);
+  text-align: justify;
+}
+
+.login-screen .block--right {
+  background-color: var(--primary-white);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.login-screen .block--right form {
+}
+.login-screen .block--right p {
+  color: var(--primary-black);
+  font-size: 1.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.login-screen .block--right .submit-btn-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.login-screen .block--right .submit-btn-container .btn {
+  margin: 0.25rem;
+  font-size: 1.9rem;
+  background-color: var(--secondary-blue);
+  color: var(--primary-white);
+  padding: 0.45rem 2rem;
+  border-radius: 0.25rem;
+}
+.login-screen .block--right .submit-btn-container .secondary-btn {
+  background-color: var(--secondary-blue);
+}
+.login-screen .block--right .submit-btn-container .primary-btn {
+  background-color: var(--primary-blue);
+}
+
+.login-screen label {
+  position: relative;
+}
+.login-screen .input-icon {
+  font-size: 3rem;
+  color: var(--primary-blue-light);
+  position: absolute;
+  top: -1.2rem;
+  left: 1rem;
+}
+
+.login-screen label input {
+  margin-top: 2rem;
+  border: 1px solid var(--secondary-blue);
+  border-radius: 0.25rem;
+  padding-left: 5rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 1.8rem;
+  outline: none;
+}
+
+.login-screen input:hover {
+  border: 2px solid var(--primary-blue);
+}
+
+.login-screen input:focus {
+  border: 2px solid var(--primary-blue);
+}
