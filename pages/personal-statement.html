@@ -28,11 +28,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Application Form For BCA 3</title>
+    <title>Personal Statement</title>
     <meta name="author" content="Digital Media Team" />
   </head>
   <body>
-    <div id="account" class="application-form-screen">
+    <div id="account" class="application-form-screen auth-screen">
       <img
         id="ellipse-illustrator"
         src="../assets/illustrator/ellipse.png"
@@ -98,63 +98,17 @@
               </div>
             </section>
 
-            <div class="notice-container">
-              <div class="notice">
-                <p class="poppins_400">
-                  Documents will not be saved during the application proces. You
-                  need to check and upload the documents in the end before
-                  submitting the application
-                </p>
-              </div>
-            </div>
+            <!-- text editor section starts  here -->
 
-            <section class="application-form-container">
-              <div class="two-col-detail-row-section">
-                <h4 class="poppins_500">Student Information</h4>
-                <div class="column-container">
-                  <div class="detail-col">
-                    <div class="input-field-container">
-                      <label class="poppins_400" for=""> PP Size Photo </label>
-                      <input type="file" />
-                    </div>
-                    <div class="input-field-container">
-                      <label class="poppins_400" for=""> SEE Marksheet </label>
-                      <input type="file" />
-                    </div>
-                  </div>
-
-                  <div class="detail-col">
-                    <div class="input-field-container">
-                      <label class="poppins_400" for="">SEE Certificate </label>
-                      <input type="file" />
-                    </div>
-                    <div class="input-field-container">
-                      <label class="poppins_400" for="">
-                        Most Recent Marksheet</label
-                      >
-                      <input type="file" />
-                    </div>
-                  </div>
-                </div>
+            <section class="text-editor-section">
+              <div class="text-editor-container">
+                <div id="editor"></div>
               </div>
             </section>
 
-            <div class="notice-container">
-              <div class="notice">
-                <p class="poppins_400">
-                  Image should be vertical positioned filename can contain
-                  letters (a-z) and numbers (0-9) but can't contain special
-                  characters or spaces.
+            <!-- text editor section  ends here -->
 
-                  <br />
-
-                  Valid Filename Example : myname_123.jpg,myname_123.png, <br />
-                  Invalid Filename Example:my_name23.pdf,my_Name23.jpg
-                </p>
-              </div>
-            </div>
-
-            <footer class="application-form-footer">
+            <section class="application-form-footer">
               <p class="poppins_400">
                 Please contact us at 981524522 if you face any confusiton during
                 your application process.
@@ -164,12 +118,14 @@
                 <button class="proceed-btn poppins_300">Previous</button>
                 <button class="proceed-btn poppins_300">Next</button>
               </div>
-            </footer>
+            </section>
           </div>
         </section>
 
         <!--  input-row-section starts here  -->
       </main>
     </div>
+
+    <script src="../assets/scripts/text-editor.js"></script>
   </body>
 </html>
