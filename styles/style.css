@@ -599,7 +599,8 @@ footer p a {
 .step2-after-txt:after,
 .step3-after-txt:after,
 .step3-after-txt:after,
-.step4-after-txt:after {
+.step4-after-txt:after,
+.step5-after-txt:after {
   text-align: center;
 }
 .step1-after-txt:after {
@@ -625,6 +626,13 @@ footer p a {
   content: "Documents";
 }
 .step4-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Personal Statement";
+}
+.step5-after-txt:after {
   font-size: 1.4rem;
   top: 4rem;
   color: black;
@@ -2046,6 +2054,10 @@ footer p a {
   background: rgba(128, 181, 216, 0.2);
 }
 
+.dbLink--active {
+  background: rgba(128, 181, 216, 0.2);
+}
+
 .db-secondary .icon-block a i {
   font-size: 5rem;
   color: var(--primary-blue);
@@ -2182,7 +2194,6 @@ footer p a {
 
 .ripple-wave {
   position: relative;
-
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s; /* Safari */
 }
@@ -2198,11 +2209,11 @@ footer p a {
   height: 100%;
   opacity: 0;
   transition: all 0.5s;
-  box-shadow: 0 0 10px 40px white;
+  box-shadow: 0 0 10px 40px var(--primary-white);
 }
 
 .ripple-wave:active:after {
-  box-shadow: 0 0 0 0 #ccc;
+  box-shadow: 0 0 0 0 rgb(208, 235, 255);
   position: absolute;
   border-radius: 4em;
   left: 0;
@@ -2340,4 +2351,64 @@ footer p a {
 .notice-list-container li {
   display: flex;
   justify-content: center;
+}
+
+/* ===============steps activate toggle cls styles  */
+
+.status {
+  transition: all ease-in-out 100ms;
+}
+.status:hover {
+  transition: all ease-in-out 100ms;
+  transform: scale(1.1);
+}
+
+.status--active,
+.status:hover {
+  background-color: var(--secondary-blue);
+  color: var(--primary-white);
+}
+
+/* flickety container */
+
+.flickety-container .carousel {
+  background: var(--primary-white);
+}
+
+.flickety-container .carousel-cell {
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.flickety-container .carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: var(--primary-white);
+}
+
+.flickety-container .button {
+  font-size: 22px;
+  padding: 0.75rem 1.5rem;
+  margin: 0.35rem;
+}
+
+.flickety-container .button-group {
+  margin-top: 5rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========dotted blob  */
+/* #account {
+  position: relative;
+} */
+.dotted-blob {
+  bottom: 0;
+  position: absolute;
 }
