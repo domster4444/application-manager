@@ -1,8 +1,5 @@
 /* global  */
 
-/* //? Global Font 40-500-600-700 */
-/* font-family: 'Montserrat', sans-serif; */
-
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +19,9 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+input {
+  color: var(--primary-blue);
+}
 button {
   border: none;
   outline: none;
@@ -38,30 +38,55 @@ button:active {
 /* variable */
 :root {
   font-size: 10px;
-  --secondary-grey: #717171;
+  --ripple-primary-bg: #1967a6;
+  --ripple-secondary-bg: #93c9ed;
+  --secondary-grey: #a3a3a3;
   --primary-red: #ff0000;
+  --primary-blue-light: rgba(15, 82, 136, 0.8);
+  --primary-orange: #f85320;
   --primary-blue: #0f5288;
   --primary-black: #000000;
   --primary-white: #ffffff;
   --secondary-blue: #80b5d8;
+
+  --primary-yellow: #e1da5e;
+  --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
 }
 
-/* =============== font families  */
-.mont_400 {
-  font-family: "Montserrat", sans-serif;
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #f6f6f6; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue); /* color of the scroll thumb */
+}
+
+/* poppins font import  @100;300;400;500;600 */
+
+.poppins_base {
+  font-family: "Poppins", sans-serif;
+}
+.poppins_100 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+.poppins_300 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.poppins_400 {
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
-.mont_500 {
-  font-family: "Montserrat", sans-serif;
+.poppins_500 {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
-.mont_600 {
-  font-family: "Montserrat", sans-serif;
+.poppins_600 {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-}
-.mont_700 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
 }
 
 /* =====================Shared  */
@@ -76,8 +101,11 @@ button:active {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   color: var(--primary-white);
-  background-color: var(--secondary-blue);
+  background-color: var(--primary-blue-light);
   font-size: 1.7rem;
+}
+.secondary-btn:hover {
+  background-color: var(--primary-blue);
 }
 
 .primary-btn,
@@ -112,13 +140,41 @@ nav.create-account_nav img {
 }
 
 #account .create-account_form {
-  width: 50%;
+  min-width: 50%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: var(--primary-white);
-  padding: 4rem 1rem;
+  /* padding: 4rem 1rem; */
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
   border-radius: 0.35rem;
 }
 
+@media (max-width: 1090px) {
+  #account .create-account_form {
+    /* width: fit-content !important; */
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  #account .create-account_form {
+    /* width: fit-content !important; */
+    width: 95%;
+  }
+}
+
+@media (max-width: 800px) {
+  #account .create-account_form {
+    /* width: fit-content !important; */
+    width: 97%;
+  }
+}
+
+#account input {
+  height: 4rem;
+}
 #account {
   position: relative;
 }
@@ -148,22 +204,35 @@ nav.create-account_nav img {
   }
 }
 
+.auth-screen .create-account_form {
+  padding-bottom: 8rem;
+}
+
 .create-account_form {
   margin-bottom: 2rem;
 }
 
 .create-account_form header h2 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   color: var(--primary-blue);
 }
 
 .create-account_form p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 1.6rem;
   color: var(--secondary-grey);
 }
+@media (max-width: 900px) {
+  .create-account_form header h2 {
+    font-size: 2.5rem;
+  }
+  .create-account_form p {
+    font-size: 1.4rem;
+  }
+}
+
 /* required star in form label */
 .required {
   color: var(--primary-red);
@@ -177,7 +246,11 @@ nav.create-account_nav img {
   flex-direction: column;
 }
 .form-division_container .right_division {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
+
 .form-division_container .left_division {
   margin-right: 5rem;
 
@@ -209,8 +282,8 @@ nav.create-account_nav img {
 
 @media only screen and (max-width: 750px) {
   .create-account_form input {
-    height: 4rem;
-    font-size: 1.8rem;
+    height: 3rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -233,7 +306,7 @@ nav.create-account_nav img {
   font-size: 1.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: var(--primary-black);
+  color: var(--primary-blue);
 }
 .form-container .primary-btn {
   margin-top: 4rem;
@@ -244,23 +317,15 @@ nav.create-account_nav img {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1390px) {
-  #account .create-account_form {
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  #account .create-account_form {
-    width: 80%;
-  }
-}
 @media only screen and (max-width: 750px) {
   #account .create-account_form label {
     flex-direction: column;
   }
   #account .create-account_form {
-    width: 90%;
+    width: 95%;
+    padding-top: 2.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .secondary-btn {
     margin-top: 2rem;
@@ -278,6 +343,9 @@ nav.create-account_nav img {
   }
 }
 
+.create-account_form input::placeholder {
+  font-size: 1.4rem;
+}
 @media only screen and (max-width: 500px) {
   /* shift label text to left most */
   .create-account_form label {
@@ -289,9 +357,6 @@ nav.create-account_nav img {
   .create-account_form input {
     width: 100%;
     height: 5rem;
-  }
-  .create-account_form input:placeholder-shown {
-    font-size: 1.8rem;
   }
   .create-account_form label,
   .form-division_container .left_division {
@@ -314,9 +379,13 @@ nav.create-account_nav img {
 /* most classes in change password screen are shared from "create-account-page" styles */
 
 .secondary-toolbar {
-  padding: 0rem 10rem;
   margin-bottom: 2rem;
-  /* background-color: red; */
+}
+
+@media only screen and (max-width: 1160px) {
+  .secondary-toolbar {
+    width: 95%;
+  }
 }
 
 .secondary-toolbar .create-account_nav {
@@ -344,4 +413,2002 @@ nav.create-account_nav img {
   .create-account_form label {
     align-items: flex-start;
   }
+}
+
+/* ================== change password  =====================  */
+
+.icon-circular-blob {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.primary-blue-gradient {
+  box-shadow: 0px 10px 30px 0px var(--secondary-blue);
+}
+
+.reset-password-screen .blob_container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.reset-password-screen .blob_container .icon-circular-blob {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-password-screen .left_division {
+  margin: 0;
+}
+.reset-password-screen .blob_container .icon-circular-blob i {
+  font-size: 5rem;
+  color: var(--primary-white);
+}
+.reset-password-screen .form-container .primary-btn {
+  margin-top: 2rem;
+}
+.reset-password-screen .form-container p {
+  margin-top: 2rem;
+}
+.reset-password-screen .form-container input {
+  width: 100%;
+}
+
+#account input {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+}
+#account input:hover,
+#account input:active,
+#account input:focus {
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+}
+
+.create-account_form {
+  position: relative;
+}
+.create-account_form footer {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+}
+
+.create-account_form footer a {
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+
+.create-account_form footer a span:hover {
+  text-decoration: underline;
+}
+
+/* unvisited link */
+.create-account_form footer a:link {
+  color: var(--primary-blue);
+}
+/* unvisited link */
+.create-account_form footer a:visited {
+  color: var(--primary-blue);
+}
+
+.create-account_form .submit-btn {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 40%;
+}
+
+@media only screen and (min-width: 900px) {
+  .create-account_form .submit-btn {
+    margin: 0rem 0.25rem 0.25rem 0rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .create-account_form .submit-btn {
+    position: relative;
+    width: 100%;
+  }
+}
+.create-account_form button {
+  border-radius: 0px;
+}
+
+.primary-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p i {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+}
+
+footer p a {
+  display: flex;
+  align-items: center;
+}
+
+#account button {
+  border-radius: 0.35rem;
+}
+
+.nav_btn-container .tertiary-btn,
+.nav_btn-container .primary-btn {
+  /* display: none; */
+  font-size: 1.5rem;
+  padding: 0.35rem 0.75rem;
+}
+
+/* =======================================================application form for bca screen styling starts from here  */
+
+.timeline {
+  padding-bottom: 4rem;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-block {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: red; */
+  width: 65%;
+}
+
+.timeline-block hr {
+  /* display: none; */
+  transform: translateX(-50%);
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  width: 75%;
+  border: none;
+  height: 0.25rem;
+  background: var(--secondary-grey);
+}
+.timeline a {
+  z-index: 100;
+  text-decoration: none;
+}
+
+.step-count-circle {
+  position: relative;
+  border: 1rem solid var(--primary-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  padding: 2rem;
+  margin: 0.25rem;
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border-radius: 50%;
+}
+
+.step1-after-txt:after,
+.step2-after-txt:after,
+.step3-after-txt:after,
+.step3-after-txt:after,
+.step4-after-txt:after,
+.step5-after-txt:after {
+  text-align: center;
+}
+.step1-after-txt:after {
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Personal Information";
+  font-size: 1.4rem;
+}
+
+.step2-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Education History";
+}
+.step3-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Documents";
+}
+.step4-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Personal Statement";
+}
+.step5-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Declaration & Consent";
+}
+
+/* 
+.timeline .step-count-line {
+} */
+
+.detail-row-section {
+  margin-top: 5rem;
+  /* background: red; */
+
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 900px) {
+  .detail-row-section {
+    width: 100%;
+  }
+}
+
+.detail-row-section h4 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.detail-row-division {
+  display: flex;
+  justify-content: space-between;
+  /* background: green; */
+}
+
+.detail-col {
+  font-size: 3rem;
+  width: 33.33%;
+}
+.detail-col input {
+  margin: 1rem 0rem;
+  width: 90%;
+}
+
+#account input[type="radio"] {
+  height: auto;
+}
+
+.gender-field {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gender-field span {
+  font-size: 1.6rem;
+}
+.gender-field label {
+  font-size: 1.4rem;
+  margin: 0rem 1rem;
+}
+.gender-field label input {
+  margin: 1rem;
+}
+
+.application-form-footer {
+  margin: 5rem 0rem;
+}
+
+.application-form-screen {
+  padding-bottom: 5rem;
+}
+
+/* application for for bca - footer   */
+
+.application-form-footer {
+  width: 95%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-form-footer p {
+  color: var(--primary-orange);
+}
+/* proceed backward || proceed forward button for footer */
+.application-form-footer .proceed-btn {
+  margin: 0.5rem;
+  font-size: 1.6rem;
+  /* margin: 1rem; */
+  padding: 0.5rem;
+  color: var(--primary-black);
+  /* background-color: var(--primary-cyan); */
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.footer-btn-container {
+  /* margin-bottom: 2rem; */
+  padding-right: 2rem;
+}
+
+.application-form-screen .create-account_form {
+  width: 80%;
+}
+
+.application-form-screen .create-account_form .notice-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 4rem;
+}
+
+.notice {
+  width: 85%;
+  /* transform: translateX(-50%); */
+  /* margin-left: 50%; */
+  border: 1px solid var(--primary-orange);
+  border-radius: 0.25rem;
+  padding: 0.75rem 0rem;
+}
+.notice p {
+  color: var(--primary-black);
+  font-size: 1.5rem;
+}
+
+/* =============== CONTAINERS  */
+/*  ! application form 65% inner container for content body */
+.application-form-container {
+  width: 85%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form-container {
+    width: 100%;
+  }
+}
+
+/* ====================== BCA FORM-  Documents Screen */
+/* 2 column detail-row-section */
+
+.two-col-detail-row-section h4 {
+  margin-top: 5rem;
+  color: var(--primary-blue);
+  font-size: 2rem;
+}
+.two-col-detail-row-section h4 {
+  color: var(--primary-blue);
+  font-size: 2rem;
+}
+
+.two-col-detail-row-section .column-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-col-detail-row-section .detail-col {
+  width: 47%;
+}
+
+@media only screen and (max-width: 900px) {
+  .application-form-screen .create-account_form footer {
+    position: relative;
+  }
+}
+
+.two-col-detail-row-section .detail-col .input-field-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem 0rem;
+}
+.two-col-detail-row-section .detail-col .input-field-container input {
+  width: 60%;
+  border: none;
+}
+
+.two-col-detail-row-section .detail-col .input-field-container label {
+  width: 40%;
+  font-size: 1.7rem;
+}
+
+/* ----------------------------Text editor styling starts from here  */
+
+/* ==============================CONTAINERS  */
+.text-editor-section {
+  margin: 4rem 0rem;
+}
+.text-editor-container {
+  width: 85%;
+  /* height: 50vh; */
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+@media only screen and (max-width: 1090px) {
+  .text-editor-container {
+    width: 100%;
+  }
+  .application-form-footer {
+    width: 100%;
+  }
+  .timeline-block {
+    width: 100%;
+  }
+}
+
+.ql-editor {
+  height: 40vh !important;
+}
+
+.ql-editor::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+.ql-editor::-webkit-scrollbar-track {
+  background: #f6f6f6; /* color of the tracking area */
+}
+.ql-editor::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+#editor p {
+  text-align: left;
+}
+
+/* =========================== text editor lib stylings  */
+/*!
+ * Quill Editor v1.3.6
+ * https://quilljs.com/
+ * Copyright (c) 2014, Jason Chen
+ * Copyright (c) 2013, salesforce.com
+ */
+.ql-container {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  margin: 0px;
+  width: 100%;
+  position: relative;
+}
+.ql-container.ql-disabled .ql-tooltip {
+  visibility: hidden;
+}
+.ql-container.ql-disabled .ql-editor ul[data-checked] > li::before {
+  pointer-events: none;
+}
+.ql-clipboard {
+  left: -100000px;
+  height: 1px;
+  overflow-y: hidden;
+  position: absolute;
+  top: 50%;
+}
+.ql-clipboard p {
+  margin: 0;
+  padding: 0;
+}
+.ql-editor {
+  box-sizing: border-box;
+  line-height: 1.42;
+  height: 100%;
+  outline: none;
+  overflow-y: auto;
+  padding: 12px 15px;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.ql-editor > * {
+  cursor: text;
+}
+.ql-editor p,
+.ql-editor ol,
+.ql-editor ul,
+.ql-editor pre,
+.ql-editor blockquote,
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3,
+.ql-editor h4,
+.ql-editor h5,
+.ql-editor h6 {
+  margin: 0;
+  padding: 0;
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol,
+.ql-editor ul {
+  padding-left: 1.5em;
+}
+.ql-editor ol > li,
+.ql-editor ul > li {
+  list-style-type: none;
+}
+.ql-editor ul > li::before {
+  content: "\2022";
+}
+.ql-editor ul[data-checked="true"],
+.ql-editor ul[data-checked="false"] {
+  pointer-events: none;
+}
+.ql-editor ul[data-checked="true"] > li *,
+.ql-editor ul[data-checked="false"] > li * {
+  pointer-events: all;
+}
+.ql-editor ul[data-checked="true"] > li::before,
+.ql-editor ul[data-checked="false"] > li::before {
+  color: #777;
+  cursor: pointer;
+  pointer-events: all;
+}
+.ql-editor ul[data-checked="true"] > li::before {
+  content: "\2611";
+}
+.ql-editor ul[data-checked="false"] > li::before {
+  content: "\2610";
+}
+.ql-editor li::before {
+  display: inline-block;
+  white-space: nowrap;
+  width: 1.2em;
+}
+.ql-editor li:not(.ql-direction-rtl)::before {
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  text-align: right;
+}
+.ql-editor li.ql-direction-rtl::before {
+  margin-left: 0.3em;
+  margin-right: -1.5em;
+}
+.ql-editor ol li:not(.ql-direction-rtl),
+.ql-editor ul li:not(.ql-direction-rtl) {
+  padding-left: 1.5em;
+}
+.ql-editor ol li.ql-direction-rtl,
+.ql-editor ul li.ql-direction-rtl {
+  padding-right: 1.5em;
+}
+.ql-editor ol li {
+  counter-reset: list-1 list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+  counter-increment: list-0;
+}
+.ql-editor ol li:before {
+  content: counter(list-0, decimal) ". ";
+}
+.ql-editor ol li.ql-indent-1 {
+  counter-increment: list-1;
+}
+.ql-editor ol li.ql-indent-1:before {
+  content: counter(list-1, lower-alpha) ". ";
+}
+.ql-editor ol li.ql-indent-1 {
+  counter-reset: list-2 list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-2 {
+  counter-increment: list-2;
+}
+.ql-editor ol li.ql-indent-2:before {
+  content: counter(list-2, lower-roman) ". ";
+}
+.ql-editor ol li.ql-indent-2 {
+  counter-reset: list-3 list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-3 {
+  counter-increment: list-3;
+}
+.ql-editor ol li.ql-indent-3:before {
+  content: counter(list-3, decimal) ". ";
+}
+.ql-editor ol li.ql-indent-3 {
+  counter-reset: list-4 list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-4 {
+  counter-increment: list-4;
+}
+.ql-editor ol li.ql-indent-4:before {
+  content: counter(list-4, lower-alpha) ". ";
+}
+.ql-editor ol li.ql-indent-4 {
+  counter-reset: list-5 list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-5 {
+  counter-increment: list-5;
+}
+.ql-editor ol li.ql-indent-5:before {
+  content: counter(list-5, lower-roman) ". ";
+}
+.ql-editor ol li.ql-indent-5 {
+  counter-reset: list-6 list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-6 {
+  counter-increment: list-6;
+}
+.ql-editor ol li.ql-indent-6:before {
+  content: counter(list-6, decimal) ". ";
+}
+.ql-editor ol li.ql-indent-6 {
+  counter-reset: list-7 list-8 list-9;
+}
+.ql-editor ol li.ql-indent-7 {
+  counter-increment: list-7;
+}
+.ql-editor ol li.ql-indent-7:before {
+  content: counter(list-7, lower-alpha) ". ";
+}
+.ql-editor ol li.ql-indent-7 {
+  counter-reset: list-8 list-9;
+}
+.ql-editor ol li.ql-indent-8 {
+  counter-increment: list-8;
+}
+.ql-editor ol li.ql-indent-8:before {
+  content: counter(list-8, lower-roman) ". ";
+}
+.ql-editor ol li.ql-indent-8 {
+  counter-reset: list-9;
+}
+.ql-editor ol li.ql-indent-9 {
+  counter-increment: list-9;
+}
+.ql-editor ol li.ql-indent-9:before {
+  content: counter(list-9, decimal) ". ";
+}
+.ql-editor .ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 3em;
+}
+.ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+  padding-left: 4.5em;
+}
+.ql-editor .ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 3em;
+}
+.ql-editor li.ql-indent-1.ql-direction-rtl.ql-align-right {
+  padding-right: 4.5em;
+}
+.ql-editor .ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 6em;
+}
+.ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+  padding-left: 7.5em;
+}
+.ql-editor .ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 6em;
+}
+.ql-editor li.ql-indent-2.ql-direction-rtl.ql-align-right {
+  padding-right: 7.5em;
+}
+.ql-editor .ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 9em;
+}
+.ql-editor li.ql-indent-3:not(.ql-direction-rtl) {
+  padding-left: 10.5em;
+}
+.ql-editor .ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 9em;
+}
+.ql-editor li.ql-indent-3.ql-direction-rtl.ql-align-right {
+  padding-right: 10.5em;
+}
+.ql-editor .ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 12em;
+}
+.ql-editor li.ql-indent-4:not(.ql-direction-rtl) {
+  padding-left: 13.5em;
+}
+.ql-editor .ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 12em;
+}
+.ql-editor li.ql-indent-4.ql-direction-rtl.ql-align-right {
+  padding-right: 13.5em;
+}
+.ql-editor .ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 15em;
+}
+.ql-editor li.ql-indent-5:not(.ql-direction-rtl) {
+  padding-left: 16.5em;
+}
+.ql-editor .ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 15em;
+}
+.ql-editor li.ql-indent-5.ql-direction-rtl.ql-align-right {
+  padding-right: 16.5em;
+}
+.ql-editor .ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 18em;
+}
+.ql-editor li.ql-indent-6:not(.ql-direction-rtl) {
+  padding-left: 19.5em;
+}
+.ql-editor .ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 18em;
+}
+.ql-editor li.ql-indent-6.ql-direction-rtl.ql-align-right {
+  padding-right: 19.5em;
+}
+.ql-editor .ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 21em;
+}
+.ql-editor li.ql-indent-7:not(.ql-direction-rtl) {
+  padding-left: 22.5em;
+}
+.ql-editor .ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 21em;
+}
+.ql-editor li.ql-indent-7.ql-direction-rtl.ql-align-right {
+  padding-right: 22.5em;
+}
+.ql-editor .ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 24em;
+}
+.ql-editor li.ql-indent-8:not(.ql-direction-rtl) {
+  padding-left: 25.5em;
+}
+.ql-editor .ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 24em;
+}
+.ql-editor li.ql-indent-8.ql-direction-rtl.ql-align-right {
+  padding-right: 25.5em;
+}
+.ql-editor .ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 27em;
+}
+.ql-editor li.ql-indent-9:not(.ql-direction-rtl) {
+  padding-left: 28.5em;
+}
+.ql-editor .ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 27em;
+}
+.ql-editor li.ql-indent-9.ql-direction-rtl.ql-align-right {
+  padding-right: 28.5em;
+}
+.ql-editor .ql-video {
+  display: block;
+  max-width: 100%;
+}
+.ql-editor .ql-video.ql-align-center {
+  margin: 0 auto;
+}
+.ql-editor .ql-video.ql-align-right {
+  margin: 0 0 0 auto;
+}
+.ql-editor .ql-bg-black {
+  background-color: #000;
+}
+.ql-editor .ql-bg-red {
+  background-color: #e60000;
+}
+.ql-editor .ql-bg-orange {
+  background-color: #f90;
+}
+.ql-editor .ql-bg-yellow {
+  background-color: #ff0;
+}
+.ql-editor .ql-bg-green {
+  background-color: #008a00;
+}
+.ql-editor .ql-bg-blue {
+  background-color: #06c;
+}
+.ql-editor .ql-bg-purple {
+  background-color: #93f;
+}
+.ql-editor .ql-color-white {
+  color: #fff;
+}
+.ql-editor .ql-color-red {
+  color: #e60000;
+}
+.ql-editor .ql-color-orange {
+  color: #f90;
+}
+.ql-editor .ql-color-yellow {
+  color: #ff0;
+}
+.ql-editor .ql-color-green {
+  color: #008a00;
+}
+.ql-editor .ql-color-blue {
+  color: #06c;
+}
+.ql-editor .ql-color-purple {
+  color: #93f;
+}
+.ql-editor .ql-font-serif {
+  font-family: Georgia, Times New Roman, serif;
+}
+.ql-editor .ql-font-monospace {
+  font-family: Monaco, Courier New, monospace;
+}
+.ql-editor .ql-size-small {
+  font-size: 0.75em;
+}
+.ql-editor .ql-size-large {
+  font-size: 1.5em;
+}
+.ql-editor .ql-size-huge {
+  font-size: 2.5em;
+}
+.ql-editor .ql-direction-rtl {
+  direction: rtl;
+  text-align: inherit;
+}
+.ql-editor .ql-align-center {
+  text-align: center;
+}
+.ql-editor .ql-align-justify {
+  text-align: justify;
+}
+.ql-editor .ql-align-right {
+  text-align: right;
+}
+.ql-editor.ql-blank::before {
+  color: rgba(0, 0, 0, 0.6);
+  content: attr(data-placeholder);
+  font-style: italic;
+  left: 15px;
+  pointer-events: none;
+  position: absolute;
+  right: 15px;
+}
+.ql-snow.ql-toolbar:after,
+.ql-snow .ql-toolbar:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.ql-snow.ql-toolbar button,
+.ql-snow .ql-toolbar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  height: 24px;
+  padding: 3px 5px;
+  width: 28px;
+}
+.ql-snow.ql-toolbar button svg,
+.ql-snow .ql-toolbar button svg {
+  float: left;
+  height: 100%;
+}
+.ql-snow.ql-toolbar button:active:hover,
+.ql-snow .ql-toolbar button:active:hover {
+  outline: none;
+}
+.ql-snow.ql-toolbar input.ql-image[type="file"],
+.ql-snow .ql-toolbar input.ql-image[type="file"] {
+  display: none;
+}
+.ql-snow.ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:hover,
+.ql-snow.ql-toolbar button:focus,
+.ql-snow .ql-toolbar button:focus,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow .ql-toolbar button.ql-active,
+.ql-snow.ql-toolbar .ql-picker-label:hover,
+.ql-snow .ql-toolbar .ql-picker-label:hover,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active,
+.ql-snow.ql-toolbar .ql-picker-item:hover,
+.ql-snow .ql-toolbar .ql-picker-item:hover,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+  color: #06c;
+}
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button:focus .ql-fill,
+.ql-snow .ql-toolbar button:focus .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+.ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+  fill: #06c;
+}
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button:focus .ql-stroke,
+.ql-snow .ql-toolbar button:focus .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+.ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar button:focus .ql-stroke-miter,
+.ql-snow .ql-toolbar button:focus .ql-stroke-miter,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+  stroke: #06c;
+}
+@media (pointer: coarse) {
+  .ql-snow.ql-toolbar button:hover:not(.ql-active),
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) {
+    color: #444;
+  }
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-fill,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-fill,
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke.ql-fill {
+    fill: #444;
+  }
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke,
+  .ql-snow.ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter,
+  .ql-snow .ql-toolbar button:hover:not(.ql-active) .ql-stroke-miter {
+    stroke: #444;
+  }
+}
+.ql-snow {
+  box-sizing: border-box;
+}
+.ql-snow * {
+  box-sizing: border-box;
+}
+.ql-snow .ql-hidden {
+  display: none;
+}
+.ql-snow .ql-out-bottom,
+.ql-snow .ql-out-top {
+  visibility: hidden;
+}
+.ql-snow .ql-tooltip {
+  position: absolute;
+  transform: translateY(10px);
+}
+.ql-snow .ql-tooltip a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.ql-snow .ql-tooltip.ql-flip {
+  transform: translateY(-10px);
+}
+.ql-snow .ql-formats {
+  display: inline-block;
+  vertical-align: middle;
+}
+.ql-snow .ql-formats:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.ql-snow .ql-stroke {
+  fill: none;
+  stroke: #444;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+.ql-snow .ql-stroke-miter {
+  fill: none;
+  stroke: #444;
+  stroke-miterlimit: 10;
+  stroke-width: 2;
+}
+.ql-snow .ql-fill,
+.ql-snow .ql-stroke.ql-fill {
+  fill: #444;
+}
+.ql-snow .ql-empty {
+  fill: none;
+}
+.ql-snow .ql-even {
+  fill-rule: evenodd;
+}
+.ql-snow .ql-thin,
+.ql-snow .ql-stroke.ql-thin {
+  stroke-width: 1;
+}
+.ql-snow .ql-transparent {
+  opacity: 0.4;
+}
+.ql-snow .ql-direction svg:last-child {
+  display: none;
+}
+.ql-snow .ql-direction.ql-active svg:last-child {
+  display: inline;
+}
+.ql-snow .ql-direction.ql-active svg:first-child {
+  display: none;
+}
+.ql-snow .ql-editor h1 {
+  font-size: 2em;
+}
+.ql-snow .ql-editor h2 {
+  font-size: 1.5em;
+}
+.ql-snow .ql-editor h3 {
+  font-size: 1.17em;
+}
+.ql-snow .ql-editor h4 {
+  font-size: 1em;
+}
+.ql-snow .ql-editor h5 {
+  font-size: 0.83em;
+}
+.ql-snow .ql-editor h6 {
+  font-size: 0.67em;
+}
+.ql-snow .ql-editor a {
+  text-decoration: underline;
+}
+.ql-snow .ql-editor blockquote {
+  border-left: 4px solid #ccc;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+.ql-snow .ql-editor code,
+.ql-snow .ql-editor pre {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+}
+.ql-snow .ql-editor pre {
+  white-space: pre-wrap;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+.ql-snow .ql-editor code {
+  font-size: 85%;
+  padding: 2px 4px;
+}
+.ql-snow .ql-editor pre.ql-syntax {
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow: visible;
+}
+.ql-snow .ql-editor img {
+  max-width: 100%;
+}
+.ql-snow .ql-picker {
+  color: #444;
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  height: 24px;
+  position: relative;
+  vertical-align: middle;
+}
+.ql-snow .ql-picker-label {
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  padding-left: 8px;
+  padding-right: 2px;
+  position: relative;
+  width: 100%;
+}
+.ql-snow .ql-picker-label::before {
+  display: inline-block;
+  line-height: 22px;
+}
+.ql-snow .ql-picker-options {
+  background-color: #fff;
+  display: none;
+  min-width: 100%;
+  padding: 4px 8px;
+  position: absolute;
+  white-space: nowrap;
+}
+.ql-snow .ql-picker-options .ql-picker-item {
+  cursor: pointer;
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  color: #ccc;
+  z-index: 2;
+}
+.ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-fill {
+  fill: #ccc;
+}
+.ql-snow .ql-picker.ql-expanded .ql-picker-label .ql-stroke {
+  stroke: #ccc;
+}
+.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  display: block;
+  margin-top: -1px;
+  top: 100%;
+  z-index: 1;
+}
+.ql-snow .ql-color-picker,
+.ql-snow .ql-icon-picker {
+  width: 28px;
+}
+.ql-snow .ql-color-picker .ql-picker-label,
+.ql-snow .ql-icon-picker .ql-picker-label {
+  padding: 2px 4px;
+}
+.ql-snow .ql-color-picker .ql-picker-label svg,
+.ql-snow .ql-icon-picker .ql-picker-label svg {
+  right: 4px;
+}
+.ql-snow .ql-icon-picker .ql-picker-options {
+  padding: 4px 0px;
+}
+.ql-snow .ql-icon-picker .ql-picker-item {
+  height: 24px;
+  width: 24px;
+  padding: 2px 4px;
+}
+.ql-snow .ql-color-picker .ql-picker-options {
+  padding: 3px 5px;
+  width: 152px;
+}
+.ql-snow .ql-color-picker .ql-picker-item {
+  border: 1px solid transparent;
+  float: left;
+  height: 16px;
+  margin: 2px;
+  padding: 0px;
+  width: 16px;
+}
+.ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+  position: absolute;
+  margin-top: -9px;
+  right: 0;
+  top: 50%;
+  width: 18px;
+}
+.ql-snow
+  .ql-picker.ql-header
+  .ql-picker-label[data-label]:not([data-label=""])::before,
+.ql-snow
+  .ql-picker.ql-font
+  .ql-picker-label[data-label]:not([data-label=""])::before,
+.ql-snow
+  .ql-picker.ql-size
+  .ql-picker-label[data-label]:not([data-label=""])::before,
+.ql-snow
+  .ql-picker.ql-header
+  .ql-picker-item[data-label]:not([data-label=""])::before,
+.ql-snow
+  .ql-picker.ql-font
+  .ql-picker-item[data-label]:not([data-label=""])::before,
+.ql-snow
+  .ql-picker.ql-size
+  .ql-picker-item[data-label]:not([data-label=""])::before {
+  content: attr(data-label);
+}
+.ql-snow .ql-picker.ql-header {
+  width: 98px;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item::before {
+  content: "Normal";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  content: "Heading 1";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  content: "Heading 2";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  content: "Heading 3";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+  content: "Heading 4";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+  content: "Heading 5";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before,
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+  content: "Heading 6";
+}
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  font-size: 2em;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  font-size: 1.5em;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  font-size: 1.17em;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+  font-size: 1em;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+  font-size: 0.83em;
+}
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+  font-size: 0.67em;
+}
+.ql-snow .ql-picker.ql-font {
+  width: 108px;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-label::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item::before {
+  content: "Sans Serif";
+}
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="serif"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="serif"]::before {
+  content: "Serif";
+}
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="monospace"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="monospace"]::before {
+  content: "Monospace";
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="serif"]::before {
+  font-family: Georgia, Times New Roman, serif;
+}
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="monospace"]::before {
+  font-family: Monaco, Courier New, monospace;
+}
+.ql-snow .ql-picker.ql-size {
+  width: 98px;
+}
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: "Normal";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="small"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="small"]::before {
+  content: "Small";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="large"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="large"]::before {
+  content: "Large";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value="huge"]::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="huge"]::before {
+  content: "Huge";
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="small"]::before {
+  font-size: 10px;
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="large"]::before {
+  font-size: 18px;
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item[data-value="huge"]::before {
+  font-size: 32px;
+}
+.ql-snow .ql-color-picker.ql-background .ql-picker-item {
+  background-color: #fff;
+}
+.ql-snow .ql-color-picker.ql-color .ql-picker-item {
+  background-color: #000;
+}
+.ql-toolbar.ql-snow {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  padding: 8px;
+}
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 15px;
+}
+.ql-toolbar.ql-snow .ql-picker-label {
+  border: 1px solid transparent;
+}
+.ql-toolbar.ql-snow .ql-picker-options {
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 8px;
+}
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+  border-color: #ccc;
+}
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  border-color: #ccc;
+}
+.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
+.ql-toolbar.ql-snow .ql-color-picker .ql-picker-item:hover {
+  border-color: #000;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 0px;
+}
+.ql-snow .ql-tooltip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px #ddd;
+  color: #444;
+  padding: 5px 12px;
+  white-space: nowrap;
+}
+.ql-snow .ql-tooltip::before {
+  content: "Visit URL:";
+  line-height: 26px;
+  margin-right: 8px;
+}
+.ql-snow .ql-tooltip input[type="text"] {
+  display: none;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  height: 26px;
+  margin: 0px;
+  padding: 3px 5px;
+  width: 170px;
+}
+.ql-snow .ql-tooltip a.ql-preview {
+  display: inline-block;
+  max-width: 200px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+.ql-snow .ql-tooltip a.ql-action::after {
+  border-right: 1px solid #ccc;
+  content: "Edit";
+  margin-left: 16px;
+  padding-right: 8px;
+}
+.ql-snow .ql-tooltip a.ql-remove::before {
+  content: "Remove";
+  margin-left: 8px;
+}
+.ql-snow .ql-tooltip a {
+  line-height: 26px;
+}
+.ql-snow .ql-tooltip.ql-editing a.ql-preview,
+.ql-snow .ql-tooltip.ql-editing a.ql-remove {
+  display: none;
+}
+.ql-snow .ql-tooltip.ql-editing input[type="text"] {
+  display: inline-block;
+}
+.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+  border-right: 0px;
+  content: "Save";
+  padding-right: 0px;
+}
+.ql-snow .ql-tooltip[data-mode="link"]::before {
+  content: "Enter link:";
+}
+.ql-snow .ql-tooltip[data-mode="formula"]::before {
+  content: "Enter formula:";
+}
+.ql-snow .ql-tooltip[data-mode="video"]::before {
+  content: "Enter video:";
+}
+.ql-snow a {
+  color: #06c;
+}
+.ql-container.ql-snow {
+  border: 1px solid #ccc;
+}
+
+/* ===================== text editor lib styling ends here  */
+
+/* ================================================declaration screen =========================== */
+.declaration-body {
+  padding-top: 5rem;
+}
+
+.declaration-body .declaration-paragraph {
+  text-align: left;
+  color: var(--primary-black);
+}
+.declaration-body .declaration-title {
+  margin: 1.75rem 0rem;
+}
+
+.declaration-title {
+  font-size: 1.8rem;
+}
+.declaration-agreen-container {
+  margin: 5rem 0rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.declaration-body .checkbox-container {
+  display: inline;
+  width: fit-content;
+}
+.declaration-body .declaration-agreen-container input[type="checkbox"] {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.declaration-agreen-container .declaration-agreen-text {
+  margin-left: 0;
+  font-size: 1.8rem;
+  color: var(--primary-black);
+  font-weight: bold;
+}
+
+/* ========================================== login screen  */
+
+.login-screen {
+}
+
+.login-screen .primary-title {
+  color: white;
+  font-size: 3.75rem;
+  text-align: center;
+}
+
+.login-screen .two-col-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 900px) {
+  .login-screen .two-col-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .login-screen .two-col-container .block--left {
+    display: none;
+  }
+}
+
+.login-screen .two-col-container .block {
+  width: 40rem;
+  margin: 2rem;
+  /* border: 1px solid red; */
+  border-radius: 0.35rem;
+  padding: 7rem 3rem;
+}
+@media only screen and (max-width: 900px) {
+  .login-screen .block {
+    margin: 1rem;
+    width: 80%;
+    padding: 5rem 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .login-screen .block {
+    width: 95% !important;
+  }
+  .login-screen .block--right .submit-btn-container {
+    flex-wrap: wrap;
+  }
+  .login-screen .block--right .btn {
+    width: 100%;
+  }
+}
+.login-screen .block p {
+  font-size: 1.7rem;
+}
+.login-screen .block--left {
+  background-color: var(--primary-blue);
+}
+.login-screen .block--left p span {
+  color: var(--primary-yellow);
+}
+.login-screen .block--left a {
+  text-decoration: none;
+}
+.login-screen .block--left p {
+  color: var(--primary-white);
+  text-align: justify;
+}
+
+.login-screen .block--right {
+  background-color: var(--primary-white);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.login-screen .block--right form {
+}
+.login-screen .block--right p {
+  color: var(--primary-black);
+  font-size: 1.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.login-screen .block--right .submit-btn-container {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.login-screen .block--right .submit-btn-container .btn {
+  margin: 0.25rem;
+  font-size: 1.9rem;
+  background-color: var(--secondary-blue);
+  color: var(--primary-white);
+  padding: 0.45rem 2rem;
+  border-radius: 0.25rem;
+}
+.login-screen .block--right .submit-btn-container .secondary-btn {
+  background-color: var(--secondary-blue);
+}
+.login-screen .block--right .submit-btn-container .primary-btn {
+  background-color: var(--primary-blue);
+}
+
+.login-screen label {
+  position: relative;
+}
+.login-screen .input-icon {
+  font-size: 3rem;
+  color: var(--primary-blue-light);
+  position: absolute;
+  top: -1.2rem;
+  left: 1rem;
+}
+
+.login-screen label input {
+  margin-top: 2rem;
+  border: 1px solid var(--secondary-blue);
+  border-radius: 0.25rem;
+  padding-left: 5rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 1.8rem;
+  outline: none;
+}
+
+.login-screen input:hover {
+  border: 2px solid var(--primary-blue);
+}
+
+.login-screen input:focus {
+  border: 2px solid var(--primary-blue);
+}
+
+/* ================================================ Dashboard   */
+/*  below container reference is taken wrt to container of secondary-toolbar & secondary-toolbar-container */
+.secondary-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.secondary-block {
+  width: 110rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 1160px) {
+  .secondary-block {
+    width: 95%;
+  }
+}
+
+/* ========================================user Dashboard body  */
+.dashboard-body {
+  border-radius: 1rem;
+  padding: 4rem 0rem;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary-white);
+  min-height: 50rem;
+  align-items: center;
+}
+
+.db-secondary .icon-block-container {
+}
+.db-secondary {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.db-secondary {
+}
+.db-secondary .icon-block {
+  /* background-color: red; */
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  margin: 1rem;
+}
+.db-secondary .icon-block:hover {
+  background: rgba(128, 181, 216, 0.2);
+}
+
+.dbLink--active {
+  background: rgba(128, 181, 216, 0.2);
+}
+
+.db-secondary .icon-block a i {
+  font-size: 5rem;
+  color: var(--primary-blue);
+  transition: all ease-in-out 150ms;
+}
+
+.db-secondary .icon-block:active a i {
+  transform: scale(0.8);
+  transition: all ease-in-out 70ms;
+}
+
+.db-primary {
+  width: 90%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .dashboard-body {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary-white);
+  }
+
+  .db-secondary {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .db-primary {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+/* db-primary - body */
+.db-primary .welcome-title {
+  color: var(--primary-blue);
+  font-size: 4rem;
+  text-align: center;
+  width: 70%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+}
+
+.db-primary .welcome-sub-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 900px) {
+  .db-primary .welcome-title {
+    font-size: 3rem;
+  }
+
+  .db-primary .welcome-sub-title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .db-primary .welcome-title {
+    font-size: 2.5rem;
+  }
+
+  .db-primary .welcome-sub-title {
+    font-size: 1.6rem;
+  }
+}
+
+.dashboard-body .proceed-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.proceed-btn-container i {
+  font-size: 6rem;
+
+  color: var(--primary-blue);
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+}
+.proceed-btn-container i:active {
+  transform: scale(0.9);
+  transform-origin: center;
+  transition: all ease-in-out 00ms;
+}
+
+/* ==============ripple effect on btn  */
+
+.ripple-secondary {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple-secondary:hover {
+  background: var(--ripple-secondary-bg)
+    radial-gradient(circle, transparent 1%, var(--ripple-secondary-bg) 1%) 50%/16000%;
+}
+
+.ripple-secondary:active {
+  background-size: 100%;
+  transition: background 0s, transform 0.2s;
+  transform: translateY(1px);
+}
+
+.ripple-primary {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple-primary:hover {
+  background: var(--ripple-primary-bg)
+    radial-gradient(circle, transparent 1%, var(--ripple-primary-bg) 1%) 50%/16000%;
+}
+
+.ripple-primary:active {
+  background-size: 100%;
+  transition: background 0s, transform 0.2s;
+  transform: translateY(1px);
+}
+
+/* === blur animation on btn  */
+
+.ripple-wave {
+  position: relative;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.ripple-wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px var(--primary-white);
+}
+
+.ripple-wave:active:after {
+  box-shadow: 0 0 0 0 rgb(208, 235, 255);
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.ripple-wave:active {
+  top: 1px;
+}
+
+/* ============================== form selection screen  */
+
+.db-primary .db-heading {
+  font-size: 3.5rem;
+  margin: 2rem 0rem;
+  color: var(--primary-blue);
+  text-align: center;
+}
+
+.form-lists-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-list {
+  margin-top: 2rem;
+  background-color: var(--primary-white);
+  width: 90%;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 0.45rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all ease-in-out 100ms;
+}
+.form-list:hover {
+  transition: all ease-in-out 200ms;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form-list p {
+  width: 80%;
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.one-liner {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.form-list button {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 0.45rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+}
+
+/* ==================notice text  */
+.notice-text--error {
+  border-left: 5px solid #ea5063;
+  background: #fceced;
+}
+.notice-text--error i {
+  color: #ea5063;
+}
+.notice-text--warning {
+  border-left: 5px solid #fbbd2b;
+  background: #fcf6e6;
+}
+.notice-text--warning i {
+  color: #fbbd2b;
+}
+
+.notice-text--info {
+  border-left: 5px solid #0ac7df;
+  background: #e1f5f8;
+}
+.notice-text--info i {
+  color: #0ac7df;
+}
+
+.notice-text--success {
+  border-left: 5px solid #45bd94;
+  background: #e5f5f0;
+}
+.notice-text--success i {
+  color: #45bd94;
+}
+
+.notice-text i {
+  font-size: 3rem;
+  margin: 0 1.5rem;
+}
+.notice-text {
+  display: flex;
+  align-items: center;
+  border-radius: 0rem;
+  /* background-color: red; */
+  padding: 1rem 0rem;
+  font-size: 1.8rem;
+  color: var(--primary-black);
+  text-align: center;
+  margin-top: 2rem;
+  width: 85%;
+}
+
+.notice-list-container {
+  margin: 1rem 0rem;
+}
+.notice-list-container li {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===============steps activate toggle cls styles  */
+
+.status {
+  transition: all ease-in-out 100ms;
+}
+.status:hover {
+  transition: all ease-in-out 100ms;
+  transform: scale(1.1);
+}
+
+.status--active,
+.status:hover {
+  background-color: var(--secondary-blue);
+  color: var(--primary-white);
+}
+
+/* flickety container */
+
+.flickety-container .carousel {
+  background: var(--primary-white);
+}
+
+.flickety-container .carousel-cell {
+  width: 100%;
+  margin-right: 10px;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.flickety-container .carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: var(--primary-white);
+}
+
+.flickety-container .button {
+  font-size: 22px;
+  padding: 0.75rem 1.5rem;
+  margin: 0.35rem;
+}
+
+.flickety-container .button-group {
+  margin-top: 5rem;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========dotted blob  */
+/* #account {
+  position: relative;
+} */
+.dotted-blob {
+  bottom: 0;
+  position: absolute;
 }
