@@ -45,12 +45,25 @@ button:active {
   --primary-blue-light: rgba(15, 82, 136, 0.8);
   --primary-orange: #f85320;
   --primary-blue: #0f5288;
+  --primary-blue-lighter: #0f5277;
   --primary-black: #000000;
   --primary-white: #ffffff;
   --secondary-blue: #80b5d8;
 
   --primary-yellow: #e1da5e;
   --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    font-size: 9.5px !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    font-size: 9px !important;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -105,7 +118,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.7rem;
 }
 .secondary-btn:hover {
-  background-color: var(--primary-blue);
+  background-color: #11558d;
 }
 
 .primary-btn,
@@ -118,6 +131,9 @@ body::-webkit-scrollbar-thumb {
 .tertiary-btn {
   color: var(--primary-blue);
   background: rgba(255, 255, 255, 0.65);
+}
+.primary-btn:hover {
+  background-color: var(--primary-blue-light);
 }
 
 /* ============create-account-screen============ */
@@ -536,6 +552,11 @@ footer p a {
 
 #account button {
   border-radius: 0.35rem;
+}
+
+.nav_btn-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav_btn-container .tertiary-btn,
@@ -2411,4 +2432,68 @@ footer p a {
 .dotted-blob {
   bottom: 0;
   position: absolute;
+}
+
+/* =====================form selection 2's list detail styles  */
+.lists-detail-container {
+  padding: 2rem 2.75rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.list-detail-block {
+  width: 100%;
+}
+
+.list-detail-block .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-detail-block .heading h1 {
+  font-size: 2.5rem;
+  color: var(--primary-black);
+  margin-bottom: 0;
+}
+
+.list-detail-block .heading button {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 0.45rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all ease-in-out 250ms;
+}
+
+.lists-detail-container .status-container {
+  /* background-color: red; */
+  width: 100%;
+}
+.lists-detail-container .status-container ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lists-detail-container .status-container li {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  background: rgba(128, 181, 216, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.lists-detail-container .status-container li h5 {
+  font-size: 1.8rem;
 }
