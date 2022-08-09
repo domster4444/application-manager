@@ -575,6 +575,15 @@ footer p a {
   justify-content: center;
 }
 
+
+@media only screen and (max-width: 480px){
+.timeline {
+  display: none;
+
+}
+
+}
+
 .timeline-block {
   position: relative;
   display: flex;
@@ -712,8 +721,9 @@ footer p a {
   display: flex;
   flex-wrap: wrap;
 }
-.gender-field span {
-  font-size: 1.6rem;
+.gender-heading {
+  margin-top:2rem;
+  font-size: 1.6rem !important;
 }
 .gender-field label {
   font-size: 1.4rem;
@@ -817,6 +827,57 @@ footer p a {
   display: flex;
   justify-content: space-between;
 }
+
+
+.upload-file-container{
+  position: relative;
+  height:  5rem;
+}
+.upload-file-container:hover{
+  transform-origin: center;
+  transform:scale(1.03);
+}
+.upload-file-container span{
+  position: absolute;
+  top:0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed var(--primary-blue);
+  color: var(--primary-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.6rem;
+  z-index: 1;
+}
+
+.file-input-container{
+  position: relative; 
+  width: 100%;
+
+  height: 100%;
+  display:flex!important;
+}
+
+
+.two-col-detail-row-section .column-container  input[type="file"]{
+  /* background:red; */
+  /* margin-top:3rem; */
+  opacity:0;
+  margin: 0;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100% !important; 
+  height: 100% !important;
+  position:relative;
+
+}
+
+
 
 .two-col-detail-row-section .detail-col {
   width: 47%;
@@ -1896,7 +1957,16 @@ footer p a {
   color: white;
   font-size: 3.75rem;
   text-align: center;
+  
 }
+
+@media only screen and  (max-width: 500px){
+  .login-screen .primary-title {
+    font-size: 6.5vw;
+
+  }
+}
+
 
 .login-screen .two-col-container {
   margin-top: 2rem;
@@ -1971,6 +2041,12 @@ footer p a {
   line-height: 1.4;
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 500px){
+  .login-screen .block--right p {
+    font-size: 1.6rem;
+  }
+}
+
 .login-screen .block--right .submit-btn-container {
   margin-top: 4rem;
   display: flex;
@@ -2496,4 +2572,86 @@ footer p a {
 
 .lists-detail-container .status-container li h5 {
   font-size: 1.8rem;
+}
+
+/* ====================== unavailable-screen screen styles  */
+
+
+.unavailable-screen  {
+  display:none;
+}
+  .unavailable-screen .unavailable-banner {
+  margin-top: 15rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  font-size: 3rem;
+  font-weight: bolder;
+  transition: all ease-in-out 250ms;
+}
+
+@media only screen and (max-width: 768px) {
+  .unavailable-screen .unavailable-banner {
+    margin-top: 10rem;
+  }
+
+  
+}
+
+.unavailable-screen h1 {
+  width: 70%;
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 7.5vw;
+  color: var(--primary-white);
+}
+
+
+
+
+.unavailable-screen .logo {
+  margin: 1rem;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .unavailable-screen .illustrator {
+    width: 100%;
+  }
+  
+}
+
+.unavailable-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media only screen and (max-width: 480px) {
+  body{
+    position: relative;
+  }
+
+  
+  body{
+    /* background-color: var(--primary-blue); */
+  }
+  .unavailable-screen {
+ background: var(--primary-blue);
+    top:0;
+    left: 0;
+    height: 100vh ;
+    overflow:hidden ;
+    position: sticky;
+    z-index: 1000;
+    display:block;
+
+  }
 }
