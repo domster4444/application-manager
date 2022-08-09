@@ -28,10 +28,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>documents</title>
+    <title>documents csit</title>
     <meta name="author" content="Digital Media Team" />
   </head>
   <body>
+    <!-- only available for web application banner  starts  here -->
+    <section class="unavailable-screen">
+      <img class="logo" src="../assets/images/logo/deerwalk-logo.png" alt="" />
+
+      <section class="unavailable-banner">
+        <img
+          src="../assets/illustrator/restrict.png"
+          class="illustrator"
+          alt=""
+        />
+
+        <h1 class="poppins_400">
+          Sorry, This page only available for web application
+        </h1>
+      </section>
+    </section>
+
+    <!-- only available for web application banner  starts  here -->
+
     <div id="account" class="application-form-screen">
       <img
         id="ellipse-illustrator"
@@ -50,13 +69,13 @@
         <section class="form_container">
           <div class="create-account_form animate__animated animate__zoomIn">
             <header>
-              <h2 class="poppins_600">Application Form For BCA</h2>
+              <h2 class="poppins_600">Application Form For CSIT</h2>
             </header>
             <section class="timeline">
               <div class="timeline-block status-container">
                 <hr />
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/personal-info.html">
+                <a href="http://127.0.0.1:5500/pages/personal-info-csit.html">
                   <div
                     class="step-count-circle poppins_400 step1-after-txt status"
                   >
@@ -66,7 +85,9 @@
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/education-history.html">
+                <a
+                  href="http://127.0.0.1:5500/pages/education-history-csit.html"
+                >
                   <div
                     class="step-count-circle poppins_400 step2-after-txt status"
                   >
@@ -76,7 +97,7 @@
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/documents.html">
+                <a href="http://127.0.0.1:5500/pages/documents-csit.html">
                   <div
                     class="step-count-circle poppins_400 step3-after-txt status status--active"
                   >
@@ -86,7 +107,9 @@
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/personal-statement.html">
+                <a
+                  href="http://127.0.0.1:5500/pages/personal-statement-csit.html"
+                >
                   <div
                     class="step-count-circle poppins_400 step4-after-txt status"
                   >
@@ -96,7 +119,7 @@
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/declaration.html">
+                <a href="http://127.0.0.1:5500/pages/declaration-csit.html">
                   <div
                     class="step-count-circle poppins_400 step5-after-txt status"
                   >
@@ -125,24 +148,48 @@
                   <div class="detail-col">
                     <div class="input-field-container">
                       <label class="poppins_400" for=""> PP Size Photo </label>
-                      <input type="file" />
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
                     </div>
                     <div class="input-field-container">
                       <label class="poppins_400" for=""> SEE Marksheet </label>
-                      <input type="file" />
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
                     </div>
                   </div>
 
                   <div class="detail-col">
                     <div class="input-field-container">
                       <label class="poppins_400" for="">SEE Certificate </label>
-                      <input type="file" />
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
                     </div>
                     <div class="input-field-container">
                       <label class="poppins_400" for="">
                         Most Recent Marksheet</label
                       >
-                      <input type="file" />
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

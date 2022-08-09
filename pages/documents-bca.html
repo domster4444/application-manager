@@ -28,10 +28,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Statement</title>
+    <title>documents</title>
     <meta name="author" content="Digital Media Team" />
   </head>
   <body>
+    <!-- only available for web application banner  starts  here -->
+    <section class="unavailable-screen">
+      <img class="logo" src="../assets/images/logo/deerwalk-logo.png" alt="" />
+
+      <section class="unavailable-banner">
+        <img
+          src="../assets/illustrator/restrict.png"
+          class="illustrator"
+          alt=""
+        />
+
+        <h1 class="poppins_400">
+          Sorry, This page only available for web application
+        </h1>
+      </section>
+    </section>
+
+    <!-- only available for web application banner  starts  here -->
+
     <div id="account" class="application-form-screen">
       <img
         id="ellipse-illustrator"
@@ -78,7 +97,7 @@
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/documents.html">
                   <div
-                    class="step-count-circle poppins_400 step3-after-txt status"
+                    class="step-count-circle poppins_400 step3-after-txt status status--active"
                   >
                     3
                   </div>
@@ -88,7 +107,7 @@
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/personal-statement.html">
                   <div
-                    class="step-count-circle poppins_400 step4-after-txt status status--active"
+                    class="step-count-circle poppins_400 step4-after-txt status"
                   >
                     4
                   </div>
@@ -108,15 +127,85 @@
               </div>
             </section>
 
-            <!-- text editor section starts  here -->
+            <div class="notice-container">
+              <div class="notice">
+                <p class="poppins_400">
+                  Documents will not be saved during the application proces. You
+                  need to check and upload the documents in the end before
+                  submitting the application
+                </p>
+              </div>
+            </div>
 
-            <section class="text-editor-section">
-              <div class="text-editor-container">
-                <div id="editor" title="write your statement here"></div>
+            <section class="application-form-container">
+              <div class="two-col-detail-row-section">
+                <h4 class="poppins_500">Student Information</h4>
+                <div class="column-container">
+                  <div class="detail-col">
+                    <div class="input-field-container">
+                      <label class="poppins_400" for=""> PP Size Photo </label>
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-field-container">
+                      <label class="poppins_400" for=""> SEE Marksheet </label>
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="detail-col">
+                    <div class="input-field-container">
+                      <label class="poppins_400" for="">SEE Certificate </label>
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-field-container">
+                      <label class="poppins_400" for="">
+                        Most Recent Marksheet</label
+                      >
+
+                      <div class="upload-file-container">
+                        <span class="poppins_400"> upload </span>
+                        <div class="file-input-container">
+                          <input required type="file" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
-            <!-- text editor section  ends here -->
+            <div class="notice-container">
+              <div class="notice">
+                <p class="poppins_400">
+                  Image should be vertical positioned filename can contain
+                  letters (a-z) and numbers (0-9) but can't contain special
+                  characters or spaces.
+
+                  <br />
+
+                  Valid Filename Example : myname_123.jpg,myname_123.png, <br />
+                  Invalid Filename Example:my_name23.pdf,my_Name23.jpg
+                </p>
+              </div>
+            </div>
 
             <section class="application-form-footer">
               <p class="poppins_400">
@@ -135,8 +224,6 @@
         <!--  input-row-section starts here  -->
       </main>
     </div>
-
     <script src="../assets/scripts/activate-steps.js"></script>
-    <script src="../assets/scripts/text-editor.js"></script>
   </body>
 </html>

@@ -32,6 +32,25 @@
     <meta name="author" content="Digital Media Team" />
   </head>
   <body>
+    <!-- only available for web application banner  starts  here -->
+    <section class="unavailable-screen">
+      <img class="logo" src="../assets/images/logo/deerwalk-logo.png" alt="" />
+
+      <section class="unavailable-banner">
+        <img
+          src="../assets/illustrator/restrict.png"
+          class="illustrator"
+          alt=""
+        />
+
+        <h1 class="poppins_400">
+          Sorry, This page only available for web application
+        </h1>
+      </section>
+    </section>
+
+    <!-- only available for web application banner  starts  here -->
+
     <div id="account" class="application-form-screen">
       <img
         id="ellipse-illustrator"
@@ -88,7 +107,7 @@
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/personal-statement.html">
                   <div
-                    class="step-count-circle poppins_400 step4-after-txt status"
+                    class="step-count-circle poppins_400 step4-after-txt status status--active"
                   >
                     4
                   </div>
@@ -98,7 +117,7 @@
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/declaration.html">
                   <div
-                    class="step-count-circle poppins_400 step5-after-txt status status--active"
+                    class="step-count-circle poppins_400 step5-after-txt status"
                   >
                     5
                   </div>
@@ -108,59 +127,13 @@
               </div>
             </section>
 
-            <!-- declaration body starts here -->
-            <section class="declaration-body">
-              <div class="application-form-container">
-                <p class="poppins_400 declaration-paragraph">
-                  I certify that the information I have provided in this
-                  application is true, complete and accurate in all respects.
-                  All information I have provided in connection with this
-                  application is subject to verification and audit by DWIT
-                  College.
-                </p>
+            <!-- text editor section starts  here -->
 
-                <br />
-                <p class="poppins_400 declaration-paragraph">
-                  I shall provide supporting documentation to DWIT College to
-                  verify my eligibility upon request.
-                </p>
-
-                <br />
-                <p class="poppins_400 declaration-paragraph">
-                  I fully understand that DWIT College has the final say on any
-                  kind of conflicts/disputes related to admission and will
-                  regard it's decision as full and final.
-                </p>
-                <h4 class="declaration-title poppins_600">
-                  Rules and Regulations
-                </h4>
-
-                <p class="poppins_400 declaration-paragraph">
-                  I fully understan that DWIT College has the final say on any
-                  kind of conflicts/disputes related to admission and will
-                  regard it's decision as full and final.
-                </p>
-
-                <h4 class="declaration-title poppins_600">Fees</h4>
-                <p class="poppins_400 declaration-paragraph">
-                  I fully understand that initial deposit made during the time
-                  of admission is non refundable.
-                </p>
-
-                <div class="declaration-agreen-container">
-                  <div class="checkbox-container">
-                    <input type="checkbox" name="checkbox" />
-                  </div>
-
-                  <p class="declaration-agreen-text poppins_500">
-                    I fully agree with the above statement and rules and
-                    regulations
-                  </p>
-                </div>
+            <section class="text-editor-section">
+              <div class="text-editor-container">
+                <div id="editor" title="write your statement here"></div>
               </div>
             </section>
-
-            <!-- declaration body  ends here-->
 
             <!-- text editor section  ends here -->
 
@@ -172,7 +145,7 @@
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
-                <button class="proceed-btn poppins_300">Save</button>
+                <button class="proceed-btn poppins_300">Next</button>
               </div>
             </section>
           </div>
@@ -182,6 +155,7 @@
       </main>
     </div>
 
+    <script src="../assets/scripts/activate-steps.js"></script>
     <script src="../assets/scripts/text-editor.js"></script>
   </body>
 </html>
