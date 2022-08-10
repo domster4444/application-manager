@@ -216,7 +216,8 @@ nav.create-account_nav img {
     display: none;
   }
   body {
-    background: var(--secondary-blue);
+    /* background: var(--secondary-blue); */
+    background-image: linear-gradient(to right, #1967a6, #3c7fb8, #5997ca, #75b0db, #93c9ed);
   }
 }
 
@@ -358,8 +359,12 @@ nav.create-account_nav img {
     margin-top: 0.75rem;
   }
 }
-
+::placeholder{
+  color: #c2c2c2;
+}
 .create-account_form input::placeholder {
+
+  
   font-size: 1.4rem;
 }
 @media only screen and (max-width: 500px) {
