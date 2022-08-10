@@ -28,8 +28,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>personal info Diploma</title>
-
+    <title>education history diploma</title>
     <meta name="author" content="Digital Media Team" />
   </head>
   <body>
@@ -72,13 +71,16 @@
             <header>
               <h2 class="poppins_600">Application Form For Diploma</h2>
             </header>
+
             <section class="timeline">
               <div class="timeline-block status-container">
                 <hr />
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/personal-info-diploma.html">
+                <a
+                  href="http://127.0.0.1:5500/pages/personal-info-diploma.html"
+                >
                   <div
-                    class="step-count-circle poppins_400 step1-after-txt status status--active"
+                    class="step-count-circle poppins_400 step1-after-txt status"
                   >
                     1
                   </div>
@@ -90,12 +92,12 @@
                   href="http://127.0.0.1:5500/pages/education-history-diploma.html"
                 >
                   <div
-                    class="step-count-circle poppins_400 step2-after-txt status"
+                    class="step-count-circle poppins_400 step2-after-txt status status--active"
                   >
                     2
                   </div>
                 </a>
-                
+
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
@@ -110,170 +112,77 @@
             </section>
 
             <section class="detail-row-section">
-              <h4 class="poppins_500">Student Information</h4>
+              <h4 class="poppins_500">SEE or Equivalent</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
-                    id="first-name"
-                    name="first-name"
-                    placeholder="First Name"
-                    type="text"
+                    id="graduated-year"
+                    name="graduated-year"
+                    placeholder="Graduated Year"
+                    type="date"
                   />
-
-
-                  <input
-                  required
-                  class="poppins_400"
-                  id="address"
-                  name="address"
-                  placeholder="Address"
-                  type="text"
-                />
-
-                  <h4 class='poppins_400 gender-heading'>Gender :</h3>
-                  <div class="gender-field poppins_400">
-
-                    <label for="male">
-                      Male
-                      <input name="gender" id="male" type="radio" />
-                    </label>
-                    <label for="female">
-                      Female
-                      <input name="gender" id="female" type="radio" />
-                    </label>
-                    <label for="others">
-                      Others
-                      <input name="gender" id="others" type="radio" />
-                    </label>
-                  </div>
-
-              
-                
                 </div>
                 <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
-                    id="middle-name"
-                    name="middle-name"
-                    placeholder="Middle Name"
+                    id="board"
+                    name="board"
+                    placeholder="Board"
                     type="text"
                   />
-                  <input
-                    required
-                    class="poppins_400"
-                    id="phone"
-                    name="phone"
-                    placeholder="Phone Number"
-                    type="tel"
-                    minlength="6" maxlength="15"
-                  />
-                  
-                  <input
-                    required
-                    class="poppins_400"
-                    id="nationality"
-                    name="nationality"
-                    placeholder="Nationality"
-                    type="text"
-                  />
-                  
-                  
                 </div>
                 <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Last Name"
+                    id="institute-name"
+                    name="institute-name"
+                    placeholder="Name of institution"
                     type="text"
-                  />
-                  <input
-                    required
-                    class="poppins_400"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address"
-                    type="email"
                   />
                 </div>
               </div>
             </section>
             <section class="detail-row-section">
-              <h4 class="poppins_500">Guardian Information</h4>
+              <h4 class="poppins_500">Ongoing/Most Recent Degree</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
-                    id="first-name"
-                    name="first-name"
-                    placeholder="First Name"
-                    type="text"
-                  />
-                  <input
-                    required
-                    class="poppins_400"
-                    id="address"
-                    name="address"
-                    placeholder="Address"
-                    type="text"
-                  />
-                  <input
-                  required
-                  class="poppins_400"
-                  id="relation"
-                  name="relation"
-                  placeholder="Relation"
-                  type="text"
-                />
-                </div>
-                <div class="detail-col">
-                  <input
-                    required
-                    class="poppins_400"
-                    id="middle-name"
-                    name="middle-name"
-                    placeholder="Middle Name"
-                    type="text"
-                  />
-                  <input
-                    required
-                    class="poppins_400"
-                    id="phone-number"
-                    name="phone-number"
-                    placeholder="Phone Number"
-                    type="tel"
-                    minlength="6" maxlength="15"
+                    id="graduated-year"
+                    name="graduated-year"
+                    placeholder="Graduated Year"
+                    type="date"
                   />
                 </div>
                 <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
-                    id="last-name"
-                    name="last-name"
-                    placeholder="Last Name"
+                    id="board"
+                    name="board"
+                    placeholder="Board"
                     type="text"
                   />
+                </div>
+                <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
-                    id="email"
-                    name="email"
-                    placeholder="Email Address"
-                    type="email"
+                    id="institute-name"
+                    name="institute-name"
+                    placeholder="Name of institution"
+                    type="text"
                   />
                 </div>
               </div>
             </section>
-            
-            
 
             <section class="application-form-footer">
               <p class="poppins_400">
