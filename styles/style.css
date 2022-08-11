@@ -659,16 +659,23 @@ footer p a {
   top: 4rem;
   color: black;
   position: absolute;
-  content: "Documents";
+  content: "Academic Information";
 }
 .step4-after-txt:after {
   font-size: 1.4rem;
   top: 4rem;
   color: black;
   position: absolute;
-  content: "Personal Statement";
+  content: "Documents";
 }
 .step5-after-txt:after {
+  font-size: 1.4rem;
+  top: 4rem;
+  color: black;
+  position: absolute;
+  content: "Personal Statement";
+}
+.step6-after-txt:after {
   font-size: 1.4rem;
   top: 4rem;
   color: black;
@@ -2660,4 +2667,93 @@ footer p a {
     display:block;
 
   }
+}
+
+
+
+/* =======================dynamic table screen  */
+
+
+
+
+
+
+#table-form-section  {
+  /* background-color: red; */
+  /* width: 85%; */
+
+}
+#table-form-section table {
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: white;
+  border-collapse: collapse;
+}
+.table-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table-btn-container  .table-btn {
+  margin: .5rem .5rem;
+}
+.table-btn {
+  justify-content: center;
+  align-content: center;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1rem;
+}
+
+#table-form-section th,
+#table-form-section td {
+  font-size: 1.8rem;
+  padding: 0px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+#table-form-section td .table-sn-number{
+  font-size: 1.5rem;
+  text-align: center;
+}
+#table-form-section td input {
+  font-size: 1.4rem;
+  outline: none;
+ 
+  border-bottom: 2px solid var(--secondary-blue);
+  width: 90%;
+}
+
+
+#table-form-section td input:hover {
+  border-bottom: 2px dashed var(--primary-blue);
+}
+
+#table-form-section td input:focus {
+  border-bottom: 2px solid var(--primary-blue);
+}
+
+#table-form-section tr:hover {
+  background-color: #f5f5f5;
+}
+
+#table-form-section th {
+  padding: 0.3rem;
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+
+#table-form-section{
+
+  margin-bottom: 5rem;
+}
+
+
+
+
+
+.title{
+  font-size: 2rem;
+  color: var(--primary-blue);
 }

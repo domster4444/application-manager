@@ -23,8 +23,10 @@
 
     <style>
       table {
-        border-collapse: collapse;
         width: 100%;
+        border-radius: 0.25rem;
+        background-color: white;
+        border-collapse: collapse;
       }
       .table-btn {
         border-radius: 50%;
@@ -91,6 +93,7 @@
           <th class="poppins_400">First Name</th>
           <th class="poppins_400">Last Name</th>
           <th class="poppins_400">Username</th>
+          <th class="poppins_400">last column</th>
         </tr>
       </thead>
       <tbody>
@@ -107,6 +110,13 @@
             <input
               type="text"
               name="last name"
+              class="animate__animated animate__zoomIn"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="username"
               class="animate__animated animate__zoomIn"
             />
           </td>
@@ -138,6 +148,7 @@
         var cell2 = row.insertCell(1);
         var cell3 = row.insertCell(2);
         var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
 
         cell1.innerHTML = `<span class='animate__animated animate__zoomIn'> ${
           table.rows.length - 1
@@ -148,6 +159,8 @@
         cell3.innerHTML =
           "<input type='text' name='lastname' class='animate__animated animate__zoomIn' />";
         cell4.innerHTML =
+          "<input type='text' name='username' class='animate__animated animate__zoomIn' />";
+        cell5.innerHTML =
           "<input type='text' name='username' class='animate__animated animate__zoomIn' />";
       }
       function removeRow() {
@@ -189,6 +202,12 @@
             i,
             "=",
             table.rows[i].cells[3].children[0].value
+          );
+          console.log(
+            "username of row",
+            i,
+            "=",
+            table.rows[i].cells[4].children[0].value
           );
         }
       }
