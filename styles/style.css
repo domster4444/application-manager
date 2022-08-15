@@ -108,6 +108,9 @@ body::-webkit-scrollbar-thumb {
 .tertiary-btn {
   border-radius: 0.35rem;
 }
+.primary-btn i{
+ margin: 0rem 0.5rem; 
+}
 .secondary-btn {
   border: none;
   padding: 0.95rem 0.9rem;
