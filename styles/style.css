@@ -54,7 +54,7 @@ button:active {
   --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
   :root {
     font-size: 9.5px !important;
   }
@@ -281,6 +281,13 @@ nav.create-account_nav img {
 
   /* //! explicit margin right used , to be mitigated later */
 }
+
+
+.flex-between{
+  display:flex;
+  justify-content: space-between;
+}
+
 
 .form-container {
   display: flex;
@@ -776,7 +783,7 @@ footer p a {
   color: var(--primary-orange);
 }
 /* proceed backward || proceed forward button for footer */
-.application-form-footer .proceed-btn {
+ .proceed-btn {
   margin: 0.5rem;
   font-size: 1.6rem;
   /* margin: 1rem; */
