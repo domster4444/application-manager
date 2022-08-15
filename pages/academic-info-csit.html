@@ -2,25 +2,12 @@
 <html lang="en">
   <head>
     <!-- For icons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
     <!-- poppins  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- animate css  -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet" />
 
     <!-- global style sheet -->
 
@@ -37,37 +24,24 @@
       <img class="logo" src="../assets/images/logo/deerwalk-logo.png" alt="" />
 
       <section class="unavailable-banner">
-        <img
-          src="../assets/illustrator/restrict.png"
-          class="illustrator"
-          alt=""
-        />
+        <img src="../assets/illustrator/restrict.png" class="illustrator" alt="" />
 
-        <h1 class="poppins_400">
-          Sorry, This page only available for web application
-        </h1>
+        <h1 class="poppins_400">Sorry, This page only available for web application</h1>
       </section>
     </section>
 
     <!-- only available for web application banner  starts  here -->
 
     <div id="account" class="application-form-screen">
-      <img
-        id="ellipse-illustrator"
-        src="../assets/illustrator/ellipse.png"
-        alt="ellipse illustrator"
-      />
+      <img id="ellipse-illustrator" src="../assets/illustrator/ellipse.png" alt="ellipse illustrator" />
 
       <main>
         <nav class="create-account_nav">
-          <img
-            src="../assets/images/logo/deerwalk-logo.png"
-            alt="company logo"
-          />
+          <img src="../assets/images/logo/deerwalk-logo.png" alt="company logo" />
         </nav>
 
         <section class="form_container">
-          <div class="create-account_form animate__animated animate__zoomIn">
+          <div class="create-account_form">
             <header>
               <h2 class="poppins_600">Application Form For CSIT</h2>
             </header>
@@ -77,65 +51,37 @@
                 <hr />
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/personal-info-csit.html">
-                  <div
-                    class="step-count-circle poppins_400 step1-after-txt status"
-                  >
-                    1
-                  </div>
+                  <div class="step-count-circle poppins_400 step1-after-txt status">1</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a
-                  href="http://127.0.0.1:5500/pages/education-history-csit.html"
-                >
-                  <div
-                    class="step-count-circle poppins_400 step2-after-txt status"
-                  >
-                    2
-                  </div>
+                <a href="http://127.0.0.1:5500/pages/education-history-csit.html">
+                  <div class="step-count-circle poppins_400 step2-after-txt status">2</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/academic-info-csit.html">
-                  <div
-                    class="step-count-circle poppins_400 step3-after-txt status status--active"
-                  >
-                    3
-                  </div>
+                  <div class="step-count-circle poppins_400 step3-after-txt status status--active">3</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/documents-csit.html">
-                  <div
-                    class="step-count-circle poppins_400 step4-after-txt status"
-                  >
-                    4
-                  </div>
+                  <div class="step-count-circle poppins_400 step4-after-txt status">4</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a
-                  href="http://127.0.0.1:5500/pages/personal-statement-csit.html"
-                >
-                  <div
-                    class="step-count-circle poppins_400 step5-after-txt status"
-                  >
-                    5
-                  </div>
+                <a href="http://127.0.0.1:5500/pages/personal-statement-csit.html">
+                  <div class="step-count-circle poppins_400 step5-after-txt status">5</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
                 <a href="http://127.0.0.1:5500/pages/declaration-csit.html">
-                  <div
-                    class="step-count-circle poppins_400 step6-after-txt status"
-                  >
-                    6
-                  </div>
+                  <div class="step-count-circle poppins_400 step6-after-txt status">6</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
@@ -151,9 +97,7 @@
 
               <!-- add remove row for table button -->
               <div class="table-btn-container">
-                <button class="table-btn" onclick="printTable('table1')">
-                  Log Table Data In Console
-                </button>
+                <button class="table-btn" onclick="printTable('table1')">Log Table Data In Console</button>
                 <button class="table-btn" onclick="addRow('table1')">
                   <i class="bx bx-plus"></i>
                 </button>
@@ -164,9 +108,7 @@
 
               <section id="table-form-section" class="table-container">
                 <!-- responsive table  -->
-                <table
-                  class="table1 table-striped table-bordered table-hover table-condensed"
-                >
+                <table class="table1 table-striped table-bordered table-hover table-condensed">
                   <thead>
                     <tr>
                       <th>S.N</th>
@@ -179,270 +121,108 @@
                   <tbody>
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          1
-                        </div>
+                        <div class="table-sn-number poppins_400">1</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="ENGLISH"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="ENGLISH" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          2
-                        </div>
+                        <div class="table-sn-number poppins_400">2</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="NEPALI"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="NEPALI" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          3
-                        </div>
+                        <div class="table-sn-number poppins_400">3</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="PHYSICS"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="PHYSICS" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          4
-                        </div>
+                        <div class="table-sn-number poppins_400">4</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="CHEMISTRY"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="CHEMISTRY" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          5
-                        </div>
+                        <div class="table-sn-number poppins_400">5</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="MATH"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="MATH" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          6
-                        </div>
+                        <div class="table-sn-number poppins_400">6</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="BIOLOGY"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="BIOLOGY" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
                   </tbody>
@@ -456,9 +236,7 @@
               <h2 class="title poppins_500">Grade XI</h2>
 
               <div class="table-btn-container">
-                <button class="table-btn" onclick="printTable('table2')">
-                  Log Table Data In Console
-                </button>
+                <button class="table-btn" onclick="printTable('table2')">Log Table Data In Console</button>
                 <button class="table-btn" onclick="addRow('table2')">
                   <i class="bx bx-plus"></i>
                 </button>
@@ -469,9 +247,7 @@
 
               <section id="table-form-section" class="table-container">
                 <!-- responsive table  -->
-                <table
-                  class="table2 table-striped table-bordered table-hover table-condensed"
-                >
+                <table class="table2 table-striped table-bordered table-hover table-condensed">
                   <thead>
                     <tr>
                       <th>S.N</th>
@@ -484,226 +260,91 @@
                   <tbody>
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          1
-                        </div>
+                        <div class="table-sn-number poppins_400">1</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="ENGLISH"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="ENGLISH" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          3
-                        </div>
+                        <div class="table-sn-number poppins_400">3</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="PHYSICS"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="PHYSICS" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          4
-                        </div>
+                        <div class="table-sn-number poppins_400">4</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="CHEMISTRY"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="CHEMISTRY" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          5
-                        </div>
+                        <div class="table-sn-number poppins_400">5</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="MATH"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="MATH" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
 
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          6
-                        </div>
+                        <div class="table-sn-number poppins_400">6</div>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
-                          value="COMPUTER SCIENCE/ BIOLOGY"
-                        />
+                        <input type="text" name="subject" placeholder="subject name" value="COMPUTER SCIENCE/ BIOLOGY" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="theory"
-                          placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="theory" placeholder="theory marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="practical"
-                          placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="practical" placeholder="practical marks" />
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          name="username"
-                          name="aggregate"
-                          placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
-                        />
+                        <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
                     </tr>
                   </tbody>
@@ -716,10 +357,7 @@
             </section>
 
             <section class="application-form-footer">
-              <p class="poppins_400">
-                Please contact us at 981524522 if you face any confusiton during
-                your application process.
-              </p>
+              <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
@@ -749,18 +387,12 @@
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
 
-        cell1.innerHTML = `<div class='table-sn-number poppins_400 animate__animated animate__zoomIn'> ${
-          table.rows.length - 1
-        } </div>`;
+        cell1.innerHTML = `<div class='table-sn-number poppins_400 '> ${table.rows.length - 1} </div>`;
 
-        cell2.innerHTML =
-          "<input type='text' name='subject' placeholder='subject name' class='animate__animated animate__zoomIn' />";
-        cell3.innerHTML =
-          "<input type='text' name='theory' placeholder='theory marks' class='animate__animated animate__zoomIn' />";
-        cell4.innerHTML =
-          "<input type='text' name='practical' placeholder='practical marks' class='animate__animated animate__zoomIn' />";
-        cell5.innerHTML =
-          "<input type='text' name='aggregate' placeholder='aggregate marks' class='animate__animated animate__zoomIn' />";
+        cell2.innerHTML = "<input type='text' name='subject' placeholder='subject name'  />";
+        cell3.innerHTML = "<input type='text' name='theory' placeholder='theory marks'  />";
+        cell4.innerHTML = "<input type='text' name='practical' placeholder='practical marks'  />";
+        cell5.innerHTML = "<input type='text' name='aggregate' placeholder='aggregate marks'  />";
       }
       function removeRow(tableid) {
         var table = document.getElementsByClassName(tableid)[0];
@@ -773,41 +405,15 @@
       function printTable(tableid) {
         var table = document.getElementsByClassName(tableid)[0];
 
-        console.log(
-          "no of rows in table = including heading",
-          table.rows.length
-        );
-        console.log(
-          "no of rows in table excluding heading heading",
-          table.rows.length - 1
-        );
+        console.log("no of rows in table = including heading", table.rows.length);
+        console.log("no of rows in table excluding heading heading", table.rows.length - 1);
 
         // print values of input fields
         for (var i = 1; i < table.rows.length; i++) {
-          console.log(
-            "first name of row",
-            i,
-            "=",
-            table.rows[i].cells[1].children[0].value
-          );
-          console.log(
-            "last name of row",
-            i,
-            "=",
-            table.rows[i].cells[2].children[0].value
-          );
-          console.log(
-            "username of row",
-            i,
-            "=",
-            table.rows[i].cells[3].children[0].value
-          );
-          console.log(
-            "username of row",
-            i,
-            "=",
-            table.rows[i].cells[4].children[0].value
-          );
+          console.log("first name of row", i, "=", table.rows[i].cells[1].children[0].value);
+          console.log("last name of row", i, "=", table.rows[i].cells[2].children[0].value);
+          console.log("username of row", i, "=", table.rows[i].cells[3].children[0].value);
+          console.log("username of row", i, "=", table.rows[i].cells[4].children[0].value);
         }
       }
     </script>
