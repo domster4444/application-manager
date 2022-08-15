@@ -378,7 +378,7 @@ nav.create-account_nav img {
   }
 }
 ::placeholder{
-  color: #c2c2c2;
+  color: #8d8d8d;
 }
 .create-account_form input::placeholder {
 
@@ -769,6 +769,16 @@ footer p a {
 
 .application-form-screen {
   padding-bottom: 5rem;
+}
+/* all form screen's  form  */
+.application-form-screen .create-account_form {
+  position: relative;
+}
+/* save to local storage btn */
+.application-form-screen .create-account_form > #save-to-lc-btn{
+  position: absolute;
+  top: -5rem;
+  right: 0;
 }
 
 /* application for for bca - footer   */
