@@ -105,9 +105,10 @@
                       <label class="poppins_400" for=""> PP Size Photo </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> upload </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -115,9 +116,10 @@
                       <label class="poppins_400" for=""> SEE Marksheet </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> upload </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -128,9 +130,10 @@
                       <label class="poppins_400" for="">SEE Certificate </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> upload </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -138,9 +141,10 @@
                       <label class="poppins_400" for=""> Most Recent Marksheet</label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> upload </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -178,5 +182,14 @@
       </main>
     </div>
     <script src="../assets/scripts/activate-steps.js"></script>
+    <script>
+      for (let i = 0; i < document.getElementsByClassName("test-upload").length; i++) {
+        document.getElementsByClassName("test-upload")[i].addEventListener("change", function (e) {
+          console.log(e.target.files[0].name);
+
+          document.getElementsByClassName("test-preview")[i].innerHTML = e.target.files[0].name;
+        });
+      }
+    </script>
   </body>
 </html>
