@@ -15,13 +15,6 @@
       rel="stylesheet"
     />
 
-    <!-- animate css  -->
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
     <!-- global style sheet -->
 
     <link rel="stylesheet" href="../styles/style.css" />
@@ -67,7 +60,7 @@
         </nav>
 
         <section class="form_container">
-          <div class="create-account_form animate__animated animate__zoomIn">
+          <div class="create-account_form">
             <header>
               <h2 class="poppins_600">Application Form For BCA</h2>
             </header>
@@ -179,18 +172,13 @@
                   <tbody>
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          1
-                        </div>
+                        <div class="table-sn-number poppins_400">1</div>
                       </td>
                       <td>
                         <input
                           type="text"
                           name="subject"
                           placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                       <td>
@@ -198,7 +186,6 @@
                           type="text"
                           name="theory"
                           placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                       <td>
@@ -207,7 +194,6 @@
                           name="username"
                           name="practical"
                           placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                       <td>
@@ -216,7 +202,6 @@
                           name="username"
                           name="aggregate"
                           placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                     </tr>
@@ -259,18 +244,13 @@
                   <tbody>
                     <tr>
                       <td>
-                        <div
-                          class="table-sn-number animate__animated animate__zoomIn poppins_400"
-                        >
-                          1
-                        </div>
+                        <div class="table-sn-number poppins_400">1</div>
                       </td>
                       <td>
                         <input
                           type="text"
                           name="subject"
                           placeholder="subject name"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                       <td>
@@ -278,7 +258,6 @@
                           type="text"
                           name="theory"
                           placeholder="theory marks"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                       <td>
@@ -287,7 +266,6 @@
                           name="username"
                           name="practical"
                           placeholder="practical marks"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                       <td>
@@ -296,7 +274,6 @@
                           name="username"
                           name="aggregate"
                           placeholder="aggregate marks"
-                          class="animate__animated animate__zoomIn"
                         />
                       </td>
                     </tr>
@@ -343,18 +320,18 @@
         var cell4 = row.insertCell(3);
         var cell5 = row.insertCell(4);
 
-        cell1.innerHTML = `<div class='table-sn-number poppins_400 animate__animated animate__zoomIn'> ${
+        cell1.innerHTML = `<div class='table-sn-number poppins_400 '> ${
           table.rows.length - 1
         } </div>`;
 
         cell2.innerHTML =
-          "<input type='text' name='subject' placeholder='subject name' class='animate__animated animate__zoomIn' />";
+          "<input type='text' name='subject' placeholder='subject name'  />";
         cell3.innerHTML =
-          "<input type='text' name='theory' placeholder='theory marks' class='animate__animated animate__zoomIn' />";
+          "<input type='text' name='theory' placeholder='theory marks'  />";
         cell4.innerHTML =
-          "<input type='text' name='practical' placeholder='practical marks' class='animate__animated animate__zoomIn' />";
+          "<input type='text' name='practical' placeholder='practical marks'  />";
         cell5.innerHTML =
-          "<input type='text' name='aggregate' placeholder='aggregate marks' class='animate__animated animate__zoomIn' />";
+          "<input type='text' name='aggregate' placeholder='aggregate marks'  />";
       }
       function removeRow(tableid) {
         var table = document.getElementsByClassName(tableid)[0];

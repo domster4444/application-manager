@@ -146,6 +146,13 @@ nav.create-account_nav {
   padding: 4rem 0rem;
 }
 
+@media only screen and (max-height: 880px){
+  nav.create-account_nav {
+    padding: 1rem  0rem 1.5rem 0rem;
+  }  
+}
+
+
 nav.create-account_nav img {
   height: 6rem;
 }
@@ -1973,6 +1980,15 @@ footer p a {
   
 }
 
+@media only screen and  (max-width: 1400px){
+  .login-screen .primary-title {
+  width: 75%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+    font-size:  3.5rem;
+  }
+}
+
 @media only screen and  (max-width: 500px){
   .login-screen .primary-title {
     font-size: 6.5vw;
@@ -1986,6 +2002,19 @@ footer p a {
   display: flex;
   justify-content: center;
 }
+
+
+
+@media only screen and (max-height: 880px){
+  
+  .login-screen .two-col-container {
+ margin: 0rem;
+  }
+}
+
+
+
+
 
 @media only screen and (max-width: 900px) {
   .login-screen .two-col-container {
@@ -2004,6 +2033,22 @@ footer p a {
   border-radius: 0.35rem;
   padding: 7rem 3rem;
 }
+
+
+
+
+@media only screen and (max-height: 880px){
+  .login-screen .two-col-container .block {
+    margin: 2rem;
+    padding: 3.5rem 2.5rem;
+  }
+}
+
+
+
+
+
+
 @media only screen and (max-width: 900px) {
   .login-screen .block {
     margin: 1rem;
@@ -2023,8 +2068,17 @@ footer p a {
   }
 }
 .login-screen .block p {
-  font-size: 1.7rem;
+  /* font size for left card */
+  font-size: 1.6rem;
 }
+
+@media only screen and (max-height: 880px){
+  .login-screen .block p {
+    font-size: 1.5rem;
+  }
+  
+}
+
 .login-screen .block--left {
   background-color: var(--primary-blue);
 }
@@ -2050,10 +2104,19 @@ footer p a {
 }
 .login-screen .block--right p {
   color: var(--primary-black);
+  /* font size for right card */
   font-size: 1.9rem;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
+
+@media only screen and (max-height: 880px){
+  .login-screen .block--right p {
+    font-size: 1.7rem;
+  }
+  
+}
+
 @media only screen and (max-width: 500px){
   .login-screen .block--right p {
     font-size: 1.6rem;
