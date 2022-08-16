@@ -114,8 +114,7 @@
                         <label class="poppins_400" for=""> Student Signature </label>
 
                         <div class="upload-file-container">
-                          <span class="poppins_400 test-preview"> upload </span>
-
+                          <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
                           <div class="file-input-container">
                             <input class="test-upload" required type="file" />
                           </div>
@@ -132,7 +131,7 @@
             <!-- text editor section  ends here -->
 
             <section class="application-form-footer">
-              <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
+              <p class="poppins_400">Please contact us at 981524522 if you face any confusion during your application process.</p>
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
@@ -148,14 +147,6 @@
 
     <script src="../assets/scripts/text-editor.js"></script>
 
-    <script>
-      for (let i = 0; i < document.getElementsByClassName("test-upload").length; i++) {
-        document.getElementsByClassName("test-upload")[i].addEventListener("change", function (e) {
-          console.log(e.target.files[0].name);
-
-          document.getElementsByClassName("test-preview")[i].innerHTML = e.target.files[0].name;
-        });
-      }
-    </script>
+    <script src="../assets/scripts/upload-test-preview.js"></script>
   </body>
 </html>

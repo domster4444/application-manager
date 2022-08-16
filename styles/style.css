@@ -286,9 +286,13 @@ nav.create-account_nav img {
 }
 
 
-.flex-between{
+.flex{
+  align-items: center;
   display:flex;
-  justify-content: space-between;
+}
+.flex button{
+  margin-left: 1.5rem;
+  font-size: 1.4rem;
 }
 
 
@@ -779,6 +783,8 @@ footer p a {
   position: absolute;
   top: -5rem;
   right: 0;
+  background-color: var(--primary-cyan);
+  color: var(--primary-blue);
 }
 
 /* application for for bca - footer   */
@@ -903,7 +909,7 @@ footer p a {
 }
 
 
-.two-col-detail-row-section .column-container  input[type="file"]{
+input[type="file"]{
   /* background:red; */
   /* margin-top:3rem; */
   opacity:0;
@@ -2839,4 +2845,30 @@ footer p a {
 .title{
   font-size: 2rem;
   color: var(--primary-blue);
+}
+
+
+#upload-success-msg{
+  width:50%;
+}
+
+/* upload file preview text */
+.test-preview{
+  padding: 1rem;
+  font-size: 1.3rem!important;
+  color: #a0a0a0 !important;
+}
+.test-preview a{
+  font-weight: bolder;
+  text-decoration: none;
+  color: var(--primary-blue-light);
+  
+}
+.test-preview a:hover{
+  text-decoration: underline;
+}
+
+/* ppsize photo upload btn in personal-info-diploma screen */
+#pp-photo-upload{
+margin-top: 1rem;
 }
