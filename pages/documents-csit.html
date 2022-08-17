@@ -42,6 +42,8 @@
 
         <section class="form_container">
           <div class="create-account_form">
+            <button class="primary-btn" id="save-to-lc-btn">Save for later</button>
+
             <header>
               <h2 class="poppins_600">Application Form For CSIT</h2>
             </header>
@@ -49,37 +51,37 @@
               <div class="timeline-block status-container">
                 <hr />
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/personal-info-csit.html">
+                <a href="http://127.0.0.1:5500/pages/personal-info-bca.html">
                   <div class="step-count-circle poppins_400 step1-after-txt status">1</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/education-history-csit.html">
+                <a href="http://127.0.0.1:5500/pages/education-history-bca.html">
                   <div class="step-count-circle poppins_400 step2-after-txt status">2</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/academic-info-csit.html">
+                <a href="http://127.0.0.1:5500/pages/academic-info-bca.html">
                   <div class="step-count-circle poppins_400 step3-after-txt status">3</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/documents-csit.html">
+                <a href="http://127.0.0.1:5500/pages/documents-bca.html">
                   <div class="step-count-circle poppins_400 step4-after-txt status status--active">4</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/personal-statement-csit.html">
+                <a href="http://127.0.0.1:5500/pages/personal-statement-bca.html">
                   <div class="step-count-circle poppins_400 step5-after-txt status">5</div>
                 </a>
                 <!-- line -->
                 <div class="step-count-line"></div>
                 <!-- circle -->
-                <a href="http://127.0.0.1:5500/pages/declaration-csit.html">
+                <a href="http://127.0.0.1:5500/pages/declaration-bca.html">
                   <div class="step-count-circle poppins_400 step6-after-txt status">6</div>
                 </a>
                 <!-- line -->
@@ -90,7 +92,7 @@
             <div class="notice-container">
               <div class="notice">
                 <p class="poppins_400">
-                  Documents will not be saved during the application proces. You need to check and upload the documents in the end before submitting
+                  Documents will not be saved during the application process. You need to check and upload the documents in the end before submitting
                   the application
                 </p>
               </div>
@@ -105,9 +107,9 @@
                       <label class="poppins_400" for=""> PP Size Photo </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -115,9 +117,10 @@
                       <label class="poppins_400" for=""> SEE Marksheet </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -128,9 +131,10 @@
                       <label class="poppins_400" for="">SEE Certificate </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -138,9 +142,10 @@
                       <label class="poppins_400" for=""> Most Recent Marksheet</label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -164,7 +169,7 @@
             </div>
 
             <section class="application-form-footer">
-              <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
+              <p class="poppins_400">Please contact us at 981524522 if you face any confusion during your application process.</p>
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
@@ -177,6 +182,8 @@
         <!--  input-row-section starts here  -->
       </main>
     </div>
+
     <script src="../assets/scripts/activate-steps.js"></script>
+    <script src="../assets/scripts/upload-test-preview.js"></script>
   </body>
 </html>

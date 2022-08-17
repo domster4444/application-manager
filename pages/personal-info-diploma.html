@@ -43,6 +43,8 @@
 
         <section class="form_container">
           <div class="create-account_form">
+            <button class="primary-btn" id="save-to-lc-btn">Save for later</button>
+
             <header>
               <h2 class="poppins_600">Application Form For Diploma</h2>
             </header>
@@ -106,11 +108,9 @@
                 </div>
               </div>
             </section>
+
             <section class="detail-row-section">
-              <div class="flex-between">
-                <h4 class="poppins_500">Guardian Information</h4>
-                <button class="proceed-btn poppins_300">Fetch Data</button>
-              </div>
+              <h4 class="poppins_500">Guardian Information</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
@@ -138,6 +138,16 @@
               </div>
             </section>
 
+            <section class="detail-row-section">
+              <h4 class="poppins_500">Passport Sized Photo</h4>
+              <div id="pp-photo-upload" class="upload-file-container">
+                <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+                <div class="file-input-container">
+                  <input class="test-upload" required type="file" />
+                </div>
+              </div>
+            </section>
+
             <section class="application-form-footer">
               <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
 
@@ -153,5 +163,7 @@
       </main>
     </div>
     <script src="../assets/scripts/activate-steps.js"></script>
+
+    <script src="../assets/scripts/upload-test-preview.js"></script>
   </body>
 </html>

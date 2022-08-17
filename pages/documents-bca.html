@@ -42,6 +42,8 @@
 
         <section class="form_container">
           <div class="create-account_form">
+            <button class="primary-btn" id="save-to-lc-btn">Save for later</button>
+
             <header>
               <h2 class="poppins_600">Application Form For BCA</h2>
             </header>
@@ -90,7 +92,7 @@
             <div class="notice-container">
               <div class="notice">
                 <p class="poppins_400">
-                  Documents will not be saved during the application proces. You need to check and upload the documents in the end before submitting
+                  Documents will not be saved during the application process. You need to check and upload the documents in the end before submitting
                   the application
                 </p>
               </div>
@@ -105,9 +107,9 @@
                       <label class="poppins_400" for=""> PP Size Photo </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -115,9 +117,10 @@
                       <label class="poppins_400" for=""> SEE Marksheet </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -128,9 +131,10 @@
                       <label class="poppins_400" for="">SEE Certificate </label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -138,9 +142,10 @@
                       <label class="poppins_400" for=""> Most Recent Marksheet</label>
 
                       <div class="upload-file-container">
-                        <span class="poppins_400"> upload </span>
+                        <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+
                         <div class="file-input-container">
-                          <input required type="file" />
+                          <input class="test-upload" required type="file" />
                         </div>
                       </div>
                     </div>
@@ -164,7 +169,7 @@
             </div>
 
             <section class="application-form-footer">
-              <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
+              <p class="poppins_400">Please contact us at 981524522 if you face any confusion during your application process.</p>
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
@@ -177,6 +182,9 @@
         <!--  input-row-section starts here  -->
       </main>
     </div>
+
     <script src="../assets/scripts/activate-steps.js"></script>
+
+    <script src="../assets/scripts/upload-test-preview.js"></script>
   </body>
 </html>

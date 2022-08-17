@@ -42,6 +42,8 @@
 
         <section class="form_container">
           <div class="create-account_form">
+            <button class="primary-btn" id="save-to-lc-btn">Save for later</button>
+
             <header>
               <h2 class="poppins_600">Application Form For CSIT</h2>
             </header>
@@ -357,7 +359,7 @@
             </section>
 
             <section class="application-form-footer">
-              <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
+              <p class="poppins_400">Please contact us at 981524522 if you face any confusion during your application process.</p>
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
@@ -375,24 +377,25 @@
       // add and remove table row function
       function addRow(tableid) {
         var table = document.getElementsByClassName(tableid)[0];
-        var row = table.insertRow(table.rows.length);
 
-        if (table.rows.length >= 12) {
+        if (table.rows.length >= 11) {
           throw new Error("Table can only have 10 rows");
           return false;
+        } else {
+          var row = table.insertRow(table.rows.length);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          var cell5 = row.insertCell(4);
+
+          cell1.innerHTML = `<div class='table-sn-number poppins_400 '> ${table.rows.length - 1} </div>`;
+
+          cell2.innerHTML = "<input type='text' name='subject' placeholder='subject name'  />";
+          cell3.innerHTML = "<input type='text' name='theory' placeholder='theory marks'  />";
+          cell4.innerHTML = "<input type='text' name='practical' placeholder='practical marks'  />";
+          cell5.innerHTML = "<input type='text' name='aggregate' placeholder='aggregate marks'  />";
         }
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        var cell5 = row.insertCell(4);
-
-        cell1.innerHTML = `<div class='table-sn-number poppins_400 '> ${table.rows.length - 1} </div>`;
-
-        cell2.innerHTML = "<input type='text' name='subject' placeholder='subject name'  />";
-        cell3.innerHTML = "<input type='text' name='theory' placeholder='theory marks'  />";
-        cell4.innerHTML = "<input type='text' name='practical' placeholder='practical marks'  />";
-        cell5.innerHTML = "<input type='text' name='aggregate' placeholder='aggregate marks'  />";
       }
       function removeRow(tableid) {
         var table = document.getElementsByClassName(tableid)[0];

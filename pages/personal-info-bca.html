@@ -43,6 +43,8 @@
 
         <section class="form_container">
           <div class="create-account_form">
+            <button class="primary-btn" id="save-to-lc-btn">Save for later</button>
+
             <header>
               <h2 class="poppins_600">Application Form For BCA</h2>
             </header>
@@ -124,7 +126,7 @@
               </div>
             </section>
 
-            <section class="detail-row-section">
+            <section class="detail-row-section" id="guardian-info">
               <h4 class="poppins_500">Guardian Information</h4>
 
               <div class="detail-row-division">
@@ -152,10 +154,10 @@
               </div>
             </section>
 
-            <section class="detail-row-section">
-              <div class="flex-between">
-                <h4 class="poppins_500">Guardian Information</h4>
-                <button class="proceed-btn poppins_300">Fetch Data</button>
+            <section class="detail-row-section" id="localguardian-info">
+              <div class="flex">
+                <h4 class="poppins_500">Local Guardian Information</h4>
+                <button class="proceed-btn poppins_300" onclick="setLocalGuardianInfo()">Copy above</button>
               </div>
               <div class="detail-row-division">
                 <div class="detail-col">
@@ -183,7 +185,7 @@
             </section>
 
             <section class="application-form-footer">
-              <p class="poppins_400">Please contact us at 981524522 if you face any confusiton during your application process.</p>
+              <p class="poppins_400">Please contact us at 981524522 if you face any confusion during your application process.</p>
 
               <div class="footer-btn-container">
                 <button class="proceed-btn poppins_300">Previous</button>
@@ -197,5 +199,28 @@
       </main>
     </div>
     <script src="../assets/scripts/activate-steps.js"></script>
+
+    <script>
+      const guardianSection = document.querySelectorAll("#guardian-info");
+
+      // get values of inputs of #guardian-info
+      const getGuardianFirstName = () => guardianSection[0].querySelector("[name='first-name']").value;
+      const getGuardianMiddleName = () => guardianSection[0].querySelector("[name='middle-name']").value;
+      const getGuardianLastName = () => guardianSection[0].querySelector("[name='last-name']").value;
+      const getGuardianAddress = () => guardianSection[0].querySelector("[name='address']").value;
+      const getGuardianPhone = () => guardianSection[0].querySelector("[name='phone-number']").value;
+      const getGuardianEmail = () => guardianSection[0].querySelector("[name='email']").value;
+
+      // sets values of guardian-info to localguardian-info
+      const setLocalGuardianInfo = () => {
+        const localGuardianSection = document.querySelectorAll("#localguardian-info");
+        localGuardianSection[0].querySelector("[name='first-name']").value = getGuardianFirstName();
+        localGuardianSection[0].querySelector("[name='middle-name']").value = getGuardianMiddleName();
+        localGuardianSection[0].querySelector("[name='last-name']").value = getGuardianLastName();
+        localGuardianSection[0].querySelector("[name='address']").value = getGuardianAddress();
+        localGuardianSection[0].querySelector("[name='phone-number']").value = getGuardianPhone();
+        localGuardianSection[0].querySelector("[name='email']").value = getGuardianEmail();
+      };
+    </script>
   </body>
 </html>
