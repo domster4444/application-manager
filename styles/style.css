@@ -2849,7 +2849,8 @@ input[type="file"]{
 
 
 #upload-success-msg{
-  width:50%;
+width: 100%;
+text-align: center;
 }
 
 /* upload file preview text */
