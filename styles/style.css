@@ -6,6 +6,19 @@
   box-sizing: border-box;
 }
 
+
+/* disable text selection */
+
+body{
+  -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome, Edge, Opera and Firefox */
+}
+
 /* hide input type-number arrows */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -13,6 +26,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+
+
 
 /* Firefox */
 input[type="number"] {
@@ -31,9 +47,18 @@ button {
   cursor: pointer;
 }
 
-button:active {
+a:active,button:active {
+  transform-origin: center;
   transform: scale(0.95);
 }
+
+
+a{
+  display: block;
+  text-decoration: none;
+}
+
+
 
 /* variable */
 :root {
@@ -781,10 +806,11 @@ footer p a {
 /* save to local storage btn */
 .application-form-screen .create-account_form > #save-to-lc-btn{
   position: absolute;
-  top: -5rem;
+  top: -6rem;
   right: 0;
   background-color: var(--primary-cyan);
   color: var(--primary-blue);
+  box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.15);
 }
 
 /* application for for bca - footer   */
@@ -802,19 +828,29 @@ footer p a {
   color: var(--primary-orange);
 }
 /* proceed backward || proceed forward button for footer */
- .proceed-btn {
+.proceed-btn {
   margin: 0.5rem;
   font-size: 1.6rem;
-  /* margin: 1rem; */
+   /* margin: 1rem; */
   padding: 0.5rem;
   color: var(--primary-black);
   /* background-color: var(--primary-cyan); */
   background-color: var(--primary-blue);
   color: white;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
 }
+
+.proceed-btn:active {
+  box-shadow:   0px 0px 10px 0px rgba(0,0,0,0.15);
+  background: var(--primary-blue-light);
+}
+
 
 .footer-btn-container {
   /* margin-bottom: 2rem; */
+  display: flex;
   padding-right: 2rem;
 }
 
