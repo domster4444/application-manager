@@ -2448,9 +2448,14 @@ input[type="file"]{
   margin-top: 4rem;
 }
 
-.proceed-btn-container i {
-  font-size: 6rem;
-
+.proceed-btn-container a  {
+  border-radius: 50%;  
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.8) 0px 8px 24px;
+}
+.proceed-btn-container a i {
+  font-size: 6.5rem;
   color: var(--primary-blue);
   cursor: pointer;
   transition: all ease-in-out 250ms;
