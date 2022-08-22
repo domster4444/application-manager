@@ -28,7 +28,12 @@ input::-webkit-inner-spin-button {
 }
 
 
-
+/* remove unnecessary date prefix  */
+input::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-text {
+  display:none;
+}
 
 /* Firefox */
 input[type="number"] {
@@ -58,6 +63,7 @@ a{
   display: block;
   text-decoration: none;
 }
+
 
 
 
