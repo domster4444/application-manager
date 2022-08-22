@@ -75,7 +75,7 @@ a{
   --primary-black: #000000;
   --primary-white: #ffffff;
   --secondary-blue: #80b5d8;
-
+ --secondary-cyan:#d7ffb8;
   --primary-yellow: #e1da5e;
   --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
 }
@@ -809,9 +809,14 @@ footer p a {
   position: absolute;
   top: -6rem;
   right: 0;
-  background-color: var(--primary-cyan);
+  background-color: var(--secondary-cyan);
+  
   color: var(--primary-blue);
   box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.15);
+}
+.application-form-screen .create-account_form > #save-to-lc-btn:hover{
+
+  background-color: var(--primary-cyan);
 }
 
 /* application for for bca - footer   */
