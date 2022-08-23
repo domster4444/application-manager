@@ -3200,3 +3200,12 @@ margin-top: 1rem;
 }
 
 
+
+
+
+/* margin for local guardian radio in personal info screen */
+#parent-info .private-public-selection{
+  margin-bottom: 1.5rem;
+
+
+}

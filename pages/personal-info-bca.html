@@ -95,41 +95,61 @@
                 <span class="required-field"> Student Information </span>
               </h4>
 
-              <div class="detail-row-division">
+              <!-- 1st input field row for student information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
                   <input required class="poppins_400" id="firstname" name="firstname" placeholder="First Name" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="middlename" name="middlename" placeholder="Middle Name" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="lastname" name="lastname" placeholder="Last Name" type="text" />
+                </div>
+              </div>
+              <!-- 2nd input field row for student information -->
 
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
                   <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
+                </div>
+              </div>
+
+              <!--3rd input field row for student information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
                   <h4 class="poppins_400 gender-heading">Gender :</h4>
                   <div class="gender-field poppins_400">
                     <label for="male">
-                      <span> Male </span>
                       <input name="gender" id="male" value="male" type="radio" />
+                      <span> Male </span>
                     </label>
                     <label for="female">
-                      <span> Female</span>
                       <input name="gender" id="female" value="female" type="radio" />
+                      <span> Female</span>
                     </label>
                     <label for="others">
-                      <span> Others </span>
                       <input name="gender" id="others" value="others" type="radio" />
+                      <span> Others </span>
                     </label>
                   </div>
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="middlename" name="middlename" placeholder="Middle Name" type="text" />
-                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
                   <input required class="poppins_400" id="cell" name="cell" placeholder="Phone Number" type="tel" minlength="6" maxlength="15" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="lastname" name="lastname" placeholder="Last Name" type="text" />
-                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
                   <input required class="poppins_400" id="email_address" name="email_address" placeholder="Email Address" type="email" />
                 </div>
               </div>
             </section>
 
-            <section class="detail-row-section">
+            <section class="detail-row-section" id="parent-info">
               <h4 class="poppins_600">
                 <span class="required-field"> Parents Information </span>
               </h4>
@@ -140,10 +160,50 @@
                 <span class="required-field"> Father Information </span>
               </h4>
 
-              <div class="detail-row-division">
+              <!-- 1st input field row for parent information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
                   <input required class="poppins_400" id="father_firstname" name="father_firstname" placeholder="Father's Name" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input
+                    required
+                    class="poppins_400"
+                    id="father_middlename"
+                    name="father_middlename"
+                    placeholder="Father's Middle Name"
+                    type="text"
+                  />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="father_lastname" name="father_lastname" placeholder="Father's Last Name" type="text" />
+                </div>
+              </div>
+
+              <!-- 2nd input field row for parent information -->
+
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
                   <input required class="poppins_400" id="father_province" name="father_province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input
+                    required
+                    class="poppins_400"
+                    id="father_municipality"
+                    name="father_municipality"
+                    placeholder="Municipality/VDC"
+                    type="email"
+                  />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="father_district" name="father_district" placeholder="District" type="text" />
+                </div>
+              </div>
+
+              <!--3rd input field row for parent information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
@@ -156,49 +216,36 @@
                   />
                 </div>
                 <div class="detail-col">
-                  <input
-                    required
-                    class="poppins_400"
-                    id="father_middlename"
-                    name="father_middlename"
-                    placeholder="Father's Middle Name"
-                    type="text"
-                  />
-                  <input
-                    required
-                    class="poppins_400"
-                    id="father_municipality"
-                    name="father_municipality"
-                    placeholder="Municipality/VDC"
-                    type="email"
-                  />
                   <input required class="poppins_400" id="father_email" name="father_email" placeholder="Email Address" type="email" />
                 </div>
-                <div class="detail-col">
-                  <input required class="poppins_400" id="father_lastname" name="father_lastname" placeholder="Father's Last Name" type="text" />
-                  <input required class="poppins_400" id="father_district" name="father_district" placeholder="District" type="text" />
-                </div>
               </div>
+
+              <div class="private-public-selection">
+                <h2 class="poppins_600">
+                  <span class="required-field"> Local Guardian </span>
+                </h2>
+                <label for="father-local-guardian">
+                  <input
+                    onchange="setLocalGuardianInfo('father')"
+                    type="radio"
+                    name="select-local-guardian"
+                    id="father-local-guardian"
+                    value="father"
+                  />
+                  <span></span>
+                </label>
+              </div>
+
               <br />
               <br />
               <h4 class="poppins_400 gender-heading">
                 <span class="required-field"> Mother Information </span>
               </h4>
 
-              <div class="detail-row-division">
+              <!-- 1st input field row for mother information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" id="mother_firstname" name="mother_firstname" placeholder="Mother's First Name" type="text" />
-                  <input required class="poppins_400" id="mother_province" name="mother_province" placeholder="Province" type="text" />
-                  <input
-                    required
-                    class="poppins_400"
-                    id="phone-number"
-                    name="phone-number"
-                    placeholder="Phone Number"
-                    type="tel"
-                    minlength="6"
-                    maxlength="15"
-                  />
+                  <input required class="poppins_400" id="mother_firstname" name="mother_firstname" placeholder="Mother's Name" type="text" />
                 </div>
                 <div class="detail-col">
                   <input
@@ -209,6 +256,18 @@
                     placeholder="Mother's Middle Name"
                     type="text"
                   />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="mother_lastname" name="mother_lastname" placeholder="Mother's Last Name" type="text" />
+                </div>
+              </div>
+              <!-- 2nd input field row for student information -->
+
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
+                  <input required class="poppins_400" id="mother_province" name="mother_province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
@@ -217,29 +276,20 @@
                     placeholder="Municipality/VDC"
                     type="email"
                   />
-                  <input required class="poppins_400" id="mother_email" name="mother_email" placeholder="Email Address" type="email" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="mother_lastname" name="mother_lastname" placeholder="Mother's Last Name" type="text" />
                   <input required class="poppins_400" id="mother_district" name="mother_district" placeholder="District" type="text" />
                 </div>
               </div>
-            </section>
-            <section class="detail-row-section" id="guardian-info">
-              <h4 class="poppins_600">
-                <span class="required-field"> Guardian Information </span>
-              </h4>
 
-              <div class="detail-row-division">
+              <!--3rd input field row for student information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" name="guardian-first-name" placeholder="First Name" type="text" />
-                  <input required class="poppins_400" name="guardian-province" placeholder="Province" type="text" />
-
                   <input
                     required
                     class="poppins_400"
-                    id="phone-number"
-                    name="guardian-phone-number"
+                    id="mother_cell"
+                    name="mother_cell"
                     placeholder="Phone Number"
                     type="tel"
                     minlength="6"
@@ -247,15 +297,24 @@
                   />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" name="guardian-middle-name" placeholder="Middle Name" type="text" />
-                  <input required class="poppins_400" name="guardian-district" placeholder="District" type="text" />
+                  <input required class="poppins_400" id="mother_email" name="mother_email" placeholder="Email Address" type="email" />
+                </div>
+              </div>
 
-                  <input required class="poppins_400" name="guardian-email" placeholder="Email Address" type="email" />
-                </div>
-                <div class="detail-col">
-                  <input required class="poppins_400" name="guardian-last-name" placeholder="Last Name" type="text" />
-                  <input required class="poppins_400" name="guardian-municipality" placeholder="Municipality/VDC" type="email" />
-                </div>
+              <div class="private-public-selection">
+                <h2 class="poppins_600">
+                  <span class="required-field"> Local Guardian </span>
+                </h2>
+                <label for="mother-local-guardian">
+                  <input
+                    onchange="setLocalGuardianInfo('mother')"
+                    type="radio"
+                    name="select-local-guardian"
+                    id="mother-local-guardian"
+                    value="private"
+                  />
+                  <span></span>
+                </label>
               </div>
             </section>
 
@@ -264,13 +323,37 @@
                 <h4 class="poppins_600">
                   <span class="required-field"> Local Guardian Information </span>
                 </h4>
-                <button class="proceed-btn poppins_300" onclick="setLocalGuardianInfo()">Copy above</button>
               </div>
-              <div class="detail-row-division">
+
+              <!-- 1st input field row for student information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
                   <input required class="poppins_400" id="local_firstname" name="local_firstname" placeholder="First Name" type="text" />
-                  <input required class="poppins_400" id="local_province" name="local_province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_middlename" name="local_middlename" placeholder="Middle Name" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_lastname" name="local_lastname" placeholder="Last Name" type="text" />
+                </div>
+              </div>
+              <!-- 2nd input field row for student information -->
 
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_province" name="local_province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_district" name="local_district" placeholder="District" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_municipality" name="local_municipality" placeholder="Municipality/VDC" type="email" />
+                </div>
+              </div>
+
+              <!--3rd input field row for student information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
                   <input
                     required
                     class="poppins_400"
@@ -283,14 +366,7 @@
                   />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="local_middlename" name="local_middlename" placeholder="Middle Name" type="text" />
-                  <input required class="poppins_400" id="local_district" name="local_district" placeholder="District" type="text" />
-
                   <input required class="poppins_400" id="local_email" name="local_email" placeholder="Email Address" type="email" />
-                </div>
-                <div class="detail-col">
-                  <input required class="poppins_400" id="local_lastname" name="local_lastname" placeholder="Last Name" type="text" />
-                  <input required class="poppins_400" id="local_municipality" name="local_municipality" placeholder="Municipality/VDC" type="email" />
                 </div>
               </div>
             </section>
@@ -312,29 +388,51 @@
     <script src="../assets/scripts/activate-steps.js"></script>
 
     <script>
-      const guardianSection = document.querySelectorAll("#guardian-info");
+      const guardianSection = document.querySelectorAll("#parent-info");
 
       // get values of inputs of #guardian-info
-      const getGuardianFirstName = () => guardianSection[0].querySelector("[name='guardian-first-name']").value;
-      const getGuardianMiddleName = () => guardianSection[0].querySelector("[name='guardian-middle-name']").value;
-      const getGuardianLastName = () => guardianSection[0].querySelector("[name='guardian-last-name']").value;
-      const getGuardianPhone = () => guardianSection[0].querySelector("[name='guardian-phone-number']").value;
-      const getGuardianEmail = () => guardianSection[0].querySelector("[name='guardian-email']").value;
-      const getGuardianProvince = () => guardianSection[0].querySelector("[name='guardian-province']").value;
-      const getGuardianDistrict = () => guardianSection[0].querySelector("[name='guardian-district']").value;
-      const getGuardianMunicipality = () => guardianSection[0].querySelector("[name='guardian-municipality']").value;
+      const getFatherFirstName = () => guardianSection[0].querySelector("[name='father_firstname']").value;
+      const getFatherMiddleName = () => guardianSection[0].querySelector("[name='father_middlename']").value;
+      const getFatherLastName = () => guardianSection[0].querySelector("[name='father_lastname']").value;
+      const getFatherPhone = () => guardianSection[0].querySelector("[name='father_cell']").value;
+      const getFatherEmail = () => guardianSection[0].querySelector("[name='father_email']").value;
+      const getFatherProvince = () => guardianSection[0].querySelector("[name='father_province']").value;
+      const getFatherDistrict = () => guardianSection[0].querySelector("[name='father_district']").value;
+      const getFatherMunicipality = () => guardianSection[0].querySelector("[name='father_municipality']").value;
+
+      // get values of inputs of #mother-info
+      const getMotherFirstName = () => guardianSection[0].querySelector("[name='mother_firstname']").value;
+      const getMotherMiddleName = () => guardianSection[0].querySelector("[name='mother_middlename']").value;
+      const getMotherLastName = () => guardianSection[0].querySelector("[name='mother_lastname']").value;
+      const getMotherPhone = () => guardianSection[0].querySelector("[name='mother_cell']").value;
+      const getMotherEmail = () => guardianSection[0].querySelector("[name='mother_email']").value;
+      const getMotherProvince = () => guardianSection[0].querySelector("[name='mother_province']").value;
+      const getMotherDistrict = () => guardianSection[0].querySelector("[name='mother_district']").value;
+      const getMotherMunicipality = () => guardianSection[0].querySelector("[name='mother_municipality']").value;
 
       // sets values of guardian-info to localguardian-info
-      const setLocalGuardianInfo = () => {
-        const localGuardianSection = document.querySelectorAll("#localguardian-info");
-        localGuardianSection[0].querySelector("[name='local_firstname']").value = getGuardianFirstName();
-        localGuardianSection[0].querySelector("[name='local_middlename']").value = getGuardianMiddleName();
-        localGuardianSection[0].querySelector("[name='local_lastname']").value = getGuardianLastName();
-        localGuardianSection[0].querySelector("[name='local_cell']").value = getGuardianPhone();
-        localGuardianSection[0].querySelector("[name='local_email']").value = getGuardianEmail();
-        localGuardianSection[0].querySelector("[name='local_province']").value = getGuardianProvince();
-        localGuardianSection[0].querySelector("[name='local_district']").value = getGuardianDistrict();
-        localGuardianSection[0].querySelector("[name='local_municipality']").value = getGuardianMunicipality();
+      const setLocalGuardianInfo = (user) => {
+        if (user === "father") {
+          const localGuardianSection = document.querySelectorAll("#localguardian-info");
+          localGuardianSection[0].querySelector("[name='local_firstname']").value = getFatherFirstName();
+          localGuardianSection[0].querySelector("[name='local_middlename']").value = getFatherMiddleName();
+          localGuardianSection[0].querySelector("[name='local_lastname']").value = getFatherLastName();
+          localGuardianSection[0].querySelector("[name='local_cell']").value = getFatherPhone();
+          localGuardianSection[0].querySelector("[name='local_email']").value = getFatherEmail();
+          localGuardianSection[0].querySelector("[name='local_province']").value = getFatherProvince();
+          localGuardianSection[0].querySelector("[name='local_district']").value = getFatherDistrict();
+          localGuardianSection[0].querySelector("[name='local_municipality']").value = getFatherMunicipality();
+        } else {
+          const localGuardianSection = document.querySelectorAll("#localguardian-info");
+          localGuardianSection[0].querySelector("[name='local_firstname']").value = getMotherFirstName();
+          localGuardianSection[0].querySelector("[name='local_middlename']").value = getMotherMiddleName();
+          localGuardianSection[0].querySelector("[name='local_lastname']").value = getMotherLastName();
+          localGuardianSection[0].querySelector("[name='local_cell']").value = getMotherPhone();
+          localGuardianSection[0].querySelector("[name='local_email']").value = getMotherEmail();
+          localGuardianSection[0].querySelector("[name='local_province']").value = getMotherProvince();
+          localGuardianSection[0].querySelector("[name='local_district']").value = getMotherDistrict();
+          localGuardianSection[0].querySelector("[name='local_municipality']").value = getMotherMunicipality();
+        }
       };
     </script>
   </body>
