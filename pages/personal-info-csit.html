@@ -15,7 +15,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>personal info csit</title>
+    <title>personal info CSIT</title>
 
     <meta name="author" content="Digital Media Team" />
   </head>
@@ -91,12 +91,13 @@
             </section>
 
             <section class="detail-row-section">
-              <h4 class="poppins_500">Student Information</h4>
+              <h4 class="poppins_600">Student Information</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
                   <input required class="poppins_400" id="first-name" name="first-name" placeholder="First Name" type="text" />
 
+                  <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
                   <h4 class="poppins_400 gender-heading">Gender :</h4>
                   <div class="gender-field poppins_400">
                     <label for="male">
@@ -112,29 +113,88 @@
                       <input name="gender" id="others" type="radio" />
                     </label>
                   </div>
-
-                  <input required class="poppins_400" id="address" name="address" placeholder="Address" type="text" />
                 </div>
                 <div class="detail-col">
                   <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
                   <input required class="poppins_400" id="phone" name="phone" placeholder="Phone Number" type="tel" minlength="6" maxlength="15" />
                 </div>
                 <div class="detail-col">
                   <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
                   <input required class="poppins_400" id="email" name="email" placeholder="Email Address" type="email" />
                 </div>
               </div>
             </section>
+
             <section class="detail-row-section" id="guardian-info">
-              <h4 class="poppins_500">Guardian Information</h4>
+              <h4 class="poppins_600">Parents Information</h4>
+
+              <br />
+              <br />
+              <h4 class="poppins_400 gender-heading">Father Information</h4>
+
+              <div class="detail-row-division">
+                <div class="detail-col">
+                  <input required class="poppins_400" id="father-name" name="father-name" placeholder="Father's Name" type="text" />
+                  <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="email" name="email" placeholder="Email Address" type="email" />
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input
+                    required
+                    class="poppins_400"
+                    id="phone-number"
+                    name="phone-number"
+                    placeholder="Phone Number"
+                    type="tel"
+                    minlength="6"
+                    maxlength="15"
+                  />
+
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
+                </div>
+              </div>
+              <br />
+              <br />
+              <h4 class="poppins_400 gender-heading">Mother Information</h4>
+
+              <div class="detail-row-division">
+                <div class="detail-col">
+                  <input required class="poppins_400" id="mother-name" name="mother-name" placeholder="Mothers's Name" type="text" />
+                  <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="email" name="email" placeholder="Email Address" type="email" />
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input
+                    required
+                    class="poppins_400"
+                    id="phone-number"
+                    name="phone-number"
+                    placeholder="Phone Number"
+                    type="tel"
+                    minlength="6"
+                    maxlength="15"
+                  />
+
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
+                </div>
+              </div>
+            </section>
+            <section class="detail-row-section" id="guardian-info">
+              <h4 class="poppins_600">Guardian Information</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
                   <input required class="poppins_400" id="first-name" name="first-name" placeholder="First Name" type="text" />
-                  <input required class="poppins_400" id="address" name="address" placeholder="Address" type="text" />
-                </div>
-                <div class="detail-col">
-                  <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
+
                   <input
                     required
                     class="poppins_400"
@@ -147,23 +207,28 @@
                   />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
+
                   <input required class="poppins_400" id="email" name="email" placeholder="Email Address" type="email" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
                 </div>
               </div>
             </section>
+
             <section class="detail-row-section" id="localguardian-info">
               <div class="flex">
-                <h4 class="poppins_500">Local Guardian Information</h4>
+                <h4 class="poppins_600">Local Guardian Information</h4>
                 <button class="proceed-btn poppins_300" onclick="setLocalGuardianInfo()">Copy above</button>
               </div>
               <div class="detail-row-division">
                 <div class="detail-col">
                   <input required class="poppins_400" id="first-name" name="first-name" placeholder="First Name" type="text" />
-                  <input required class="poppins_400" id="address" name="address" placeholder="Address" type="text" />
-                </div>
-                <div class="detail-col">
-                  <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
+
                   <input
                     required
                     class="poppins_400"
@@ -176,8 +241,14 @@
                   />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
+
                   <input required class="poppins_400" id="email" name="email" placeholder="Email Address" type="email" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
                 </div>
               </div>
             </section>
@@ -205,9 +276,11 @@
       const getGuardianFirstName = () => guardianSection[0].querySelector("[name='first-name']").value;
       const getGuardianMiddleName = () => guardianSection[0].querySelector("[name='middle-name']").value;
       const getGuardianLastName = () => guardianSection[0].querySelector("[name='last-name']").value;
-      const getGuardianAddress = () => guardianSection[0].querySelector("[name='address']").value;
       const getGuardianPhone = () => guardianSection[0].querySelector("[name='phone-number']").value;
       const getGuardianEmail = () => guardianSection[0].querySelector("[name='email']").value;
+      const getGuardianProvince = () => guardianSection[0].querySelector("[name='province']").value;
+      const getGuardianDistrict = () => guardianSection[0].querySelector("[name='district']").value;
+      const getGuardianMunicipality = () => guardianSection[0].querySelector("[name='municipality']").value;
 
       // sets values of guardian-info to localguardian-info
       const setLocalGuardianInfo = () => {
@@ -215,9 +288,11 @@
         localGuardianSection[0].querySelector("[name='first-name']").value = getGuardianFirstName();
         localGuardianSection[0].querySelector("[name='middle-name']").value = getGuardianMiddleName();
         localGuardianSection[0].querySelector("[name='last-name']").value = getGuardianLastName();
-        localGuardianSection[0].querySelector("[name='address']").value = getGuardianAddress();
         localGuardianSection[0].querySelector("[name='phone-number']").value = getGuardianPhone();
         localGuardianSection[0].querySelector("[name='email']").value = getGuardianEmail();
+        localGuardianSection[0].querySelector("[name='province']").value = getGuardianProvince();
+        localGuardianSection[0].querySelector("[name='district']").value = getGuardianDistrict();
+        localGuardianSection[0].querySelector("[name='municipality']").value = getGuardianMunicipality();
       };
     </script>
   </body>

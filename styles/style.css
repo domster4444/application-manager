@@ -335,7 +335,7 @@ nav.create-account_nav img {
 
 .create-account_form label {
   align-items: center;
-  margin-top: 1.4rem;
+  /* margin-top: 1.4rem; */
   font-size: 1.6rem;
   display: flex;
   justify-content: space-between;
@@ -785,15 +785,15 @@ footer p a {
 .gender-field {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .gender-heading {
-  margin-top:2rem;
+  /* margin-top:2rem; */
   font-size: 1.6rem !important;
 }
 .gender-field label {
   font-size: 1.4rem;
-  margin: 0rem 1rem;
+  /* margin: 0rem 1rem; */
 }
 .gender-field label input {
   margin: 1rem;
@@ -805,6 +805,9 @@ footer p a {
 
 .application-form-screen {
   padding-bottom: 5rem;
+}
+.application-form-screen header h2{
+  margin-bottom: 1.5rem;
 }
 /* all form screen's  form  */
 .application-form-screen .create-account_form {
@@ -866,13 +869,13 @@ footer p a {
   padding-right: 2rem;
 }
 .footer-btn-container .proceed-btn {
+  box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.25);
   position: relative;
   overflow: hidden;
   padding: 0.75rem 1rem;
   text-align: center;
   display: flex;
 justify-content: center;
-width: 14rem;
 align-items: center;
 }
 
@@ -902,7 +905,7 @@ align-items: center;
 
 .footer-btn-container .proceed-btn  i{
   color:transparent ;
-  margin:0rem 0.55rem;
+  margin-left:0.55rem;
   color:var(--primary-white);
 }
 
