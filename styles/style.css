@@ -337,8 +337,8 @@ nav.create-account_nav img {
   align-items: center;
   /* margin-top: 1.4rem; */
   font-size: 1.6rem;
-  display: flex;
-  justify-content: space-between;
+  
+
 }
 
 .create-account_form input {
@@ -452,6 +452,11 @@ nav.create-account_nav img {
 
 /* ========================  change password  */
 /* most classes in change password screen are shared from "create-account-page" styles */
+
+.form-division_container  label{
+  display: flex;
+  justify-content: space-between;
+}
 
 .secondary-toolbar {
   margin-bottom: 2rem;
@@ -868,6 +873,18 @@ footer p a {
   display: flex;
   padding-right: 2rem;
 }
+
+
+@media only screen and (max-width: 350px) {
+  .application-form-footer{
+    flex-wrap: wrap;
+
+  }
+  .footer-btn-container {
+ flex-wrap: wrap;
+  }
+}
+
 .footer-btn-container .proceed-btn {
   box-shadow:  0px 0px 10px 0px rgba(0,0,0,0.25);
   position: relative;
@@ -2987,3 +3004,106 @@ text-align: center;
 #pp-photo-upload{
 margin-top: 1rem;
 }
+
+
+
+/* ================= private public selection  */
+
+.private-public-selection{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.private-public-selection h2{
+  color: var(--primary-blue);
+}
+.private-public-selection h2,
+.private-public-selection label span {
+  font-size: 1.5rem;
+}
+
+
+/* 
+* With how I decided to build this, the position: relative is super important.
+* We're going to position a pseudo element within this element(As it is the containing box)
+*/
+
+ .private-public-selection label {
+  display:flex;
+  align-items: center;
+  margin-left: 1rem;
+ }
+ .private-public-selection label span {
+  position: relative;
+}
+
+
+/* 
+ * Because we're using pseudo elements, a content property is required to make them appear.
+ */
+
+ .private-public-selection label span:before {
+  content: '';
+}
+
+.private-public-selection label span:after{
+  content: '✓';
+
+}
+
+
+/*
+ * We are using the :before peudo elemnt as the actual button,
+ * then we'll position the :after over it. You could also use a background-image,
+ * font-icon, or really anything if you want different styles.
+ * For the specific style we're going for, this approach is simply the easiest, but
+ * once you understand the concept you can really do it however you like.
+ */
+ 
+ .private-public-selection label span:before {
+   border: 1px solid var(--primary-blue);
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.private-public-selection label span:after {
+ border-radius: .15rem;
+  width: 14px;
+  height: 14px;
+  font-weight: bold;
+  color: var(--primary-blue);
+  font-size: 2rem;
+  top:0rem;
+  left :0.5rem;
+  position: absolute;
+  transition: 300ms;
+  opacity: 0;
+}
+
+/*
+* This is the most important part of this whole file, if you understand what's happening here
+* you can really make this in so many different ways.
+* 
+* We start by selecting the input inside of the label, with "label input". From there we use the 
+ * ":checked" selector to *only* select the input when it is checked. We then use the immediate sibling 
+ * selector(+) to select the span, and then it's pseudo element :after(What we are using to mark the button)
+ * Because we already styled the :after, all we have to do is set the opacity to 1, making it fade in.
+ */
+ .private-public-selection label input:checked+span:after {
+   opacity: 1;
+  }
+  .private-public-selection label input {
+    display: none;
+    
+  }
+  
+  
+  @media only screen and (max-width: 500px){
+    .private-public-selection label {
+      width: fit-content;
+    }
+    
+  }
