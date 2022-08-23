@@ -139,6 +139,11 @@
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table1',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -155,6 +160,11 @@
                       </td>
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
+                      </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table1',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
                       </td>
                     </tr>
 
@@ -174,6 +184,11 @@
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table1',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     <tr>
@@ -191,6 +206,11 @@
                       </td>
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
+                      </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table1',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
                       </td>
                     </tr>
 
@@ -210,6 +230,11 @@
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table1',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     <tr>
@@ -227,6 +252,11 @@
                       </td>
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
+                      </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table1',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
                       </td>
                     </tr>
                   </tbody>
@@ -280,6 +310,11 @@
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table2',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     <tr>
@@ -297,6 +332,11 @@
                       </td>
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
+                      </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table2',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
                       </td>
                     </tr>
 
@@ -316,6 +356,11 @@
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table2',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     <tr>
@@ -334,6 +379,11 @@
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
                       </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table2',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
+                      </td>
                     </tr>
 
                     <tr>
@@ -351,6 +401,11 @@
                       </td>
                       <td>
                         <input type="text" name="username" name="aggregate" placeholder="aggregate marks" />
+                      </td>
+                      <td>
+                        <button class="table-btn" onclick="removeIndividualRow('table2',this)">
+                          <i class="bx bx-trash"></i>
+                        </button>
                       </td>
                     </tr>
                   </tbody>
@@ -399,6 +454,12 @@
           cell3.innerHTML = "<input type='text' name='theory' placeholder='theory marks'  />";
           cell4.innerHTML = "<input type='text' name='practical' placeholder='practical marks'  />";
           cell5.innerHTML = "<input type='text' name='aggregate' placeholder='aggregate marks'  />";
+
+          // insert remove individual row button
+          var cell6 = row.insertCell(5);
+          cell6.innerHTML = `<button class='table-btn' onclick='removeIndividualRow("${tableid}", this)'>
+                              <i class='bx bx-trash'></i>
+                            </button>`;
         }
       }
       function removeRow(tableid) {
@@ -422,6 +483,12 @@
           console.log("username of row", i, "=", table.rows[i].cells[3].children[0].value);
           console.log("username of row", i, "=", table.rows[i].cells[4].children[0].value);
         }
+      }
+
+      // remove individual row function
+      function removeIndividualRow(tableid, row) {
+        var table = document.getElementsByClassName(tableid)[0];
+        table.deleteRow(row.parentNode.parentNode.rowIndex);
       }
     </script>
 
