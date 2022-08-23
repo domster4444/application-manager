@@ -422,6 +422,12 @@ nav.create-account_nav img {
     margin-top: 0.75rem;
   }
 }
+
+
+
+input[type=date]:invalid::-webkit-datetime-edit {
+  color: #8d8d8d;
+}
 ::placeholder{
   color: #8d8d8d;
 }
@@ -3206,6 +3212,5 @@ margin-top: 1rem;
 /* margin for local guardian radio in personal info screen */
 #parent-info .private-public-selection{
   margin-bottom: 1.5rem;
-
-
 }
+
