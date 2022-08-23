@@ -390,7 +390,7 @@ nav.create-account_nav img {
 
 @media only screen and (max-width: 750px) {
   #account .create-account_form label {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   #account .create-account_form {
     width: 95%;
@@ -423,31 +423,32 @@ nav.create-account_nav img {
 }
 @media only screen and (max-width: 500px) {
   /* shift label text to left most */
-  .create-account_form label {
+  .create-account_form .gender-field label {
     align-items: flex-start;
   }
   .form-container {
     justify-content: flex-start;
   }
-  .create-account_form input {
+  .create-account_form .gender-field input {
     width: 100%;
     height: 5rem;
   }
-  .create-account_form label,
+  .create-account_form .gender-field label,
   .form-division_container .left_division {
     width: 100%;
   }
-
+  
   .form-btn_container {
     width: 100%;
   }
-
-  .form-container form {
+  
+  .form-container .gender-field form {
     width: 100%;
   }
   .form-container form .primary-btn {
     width: 100%;
   }
+ 
 }
 
 /* ========================  change password  */
@@ -790,17 +791,46 @@ footer p a {
 .gender-field {
   align-items: center;
   display: flex;
-  /* flex-wrap: wrap; */
+
 }
+
+
+
+@media only screen and ( max-width:755px) {
+  .create-account_form .gender-field label  {
+    align-items: center;
+    width: 100%;
+  }
+  .create-account_form .gender-field label span  {
+    min-width: 10rem ;
+  }
+  .create-account_form .gender-field label input  {
+    width: 2rem;
+  }
+  
+.gender-field {
+  flex-direction: column;
+  align-items: flex-start;
+}
+}
+
+
+
+
 .gender-heading {
   /* margin-top:2rem; */
   font-size: 1.6rem !important;
 }
+.gender-field {
+  display: flex;
+}
 .gender-field label {
   font-size: 1.4rem;
+display: flex;
   /* margin: 0rem 1rem; */
 }
 .gender-field label input {
+  display: inline;
   margin: 1rem;
 }
 
@@ -1059,6 +1089,7 @@ input[type="file"]{
 .two-col-detail-row-section .detail-col .input-field-container label {
   width: 40%;
   font-size: 1.7rem;
+  display: flex;
 }
 
 
