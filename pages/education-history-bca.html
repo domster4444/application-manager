@@ -42,7 +42,7 @@
 
         <section class="form_container">
           <div class="create-account_form">
-            <button class="primary-btn" id="save-to-lc-btn">Save for later</button>
+            <a href="#" class="primary-btn poppins_400" id="save-to-lc-btn">Save for later</a>
 
             <header>
               <h2 class="poppins_600">Application Form For BCA</h2>
@@ -91,7 +91,7 @@
             </section>
 
             <section class="detail-row-section">
-              <h4 class="poppins_500">SEE or Equivalent</h4>
+              <h4 class="poppins_600">SEE or Equivalent</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
@@ -103,10 +103,24 @@
                 <div class="detail-col">
                   <input required class="poppins_400" id="institute-name" name="institute-name" placeholder="Name of institution" type="text" />
                 </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="grade" name="grade" placeholder="Grade" type="text" />
+                </div>
+              </div>
+              <div class="private-public-selection">
+                <h2 class="poppins_600">SCHOOL</h2>
+                <label for="school-private1">
+                  <input type="radio" name="school-type1" id="school-private1" value="private" />
+                  <span class="poppins_400">Private</span>
+                </label>
+                <label for="school-public2">
+                  <input type="radio" name="school-type1" id="school-public2" value="public" />
+                  <span class="poppins_400">Public</span>
+                </label>
               </div>
             </section>
             <section class="detail-row-section">
-              <h4 class="poppins_500">Ongoing/Most Recent Degree</h4>
+              <h4 class="poppins_600">Ongoing/Most Recent Degree</h4>
 
               <div class="detail-row-division">
                 <div class="detail-col">
@@ -118,6 +132,20 @@
                 <div class="detail-col">
                   <input required class="poppins_400" id="institute-name" name="institute-name" placeholder="Name of institution" type="text" />
                 </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="grade" name="grade" placeholder="Grade" type="text" />
+                </div>
+              </div>
+              <div class="private-public-selection">
+                <h2 class="poppins_600">SCHOOL</h2>
+                <label for="school-private3">
+                  <input type="radio" name="school-type2" id="school-private3" value="private" />
+                  <span class="poppins_400">Private</span>
+                </label>
+                <label for="school-public4">
+                  <input type="radio" name="school-type2" id="school-public4" value="public" />
+                  <span class="poppins_400">Public</span>
+                </label>
               </div>
             </section>
 
@@ -125,8 +153,8 @@
               <p class="poppins_400">Please contact us at 981524522 if you face any confusion during your application process.</p>
 
               <div class="footer-btn-container">
-                <button class="proceed-btn poppins_300">Previous</button>
-                <button class="proceed-btn poppins_300">Next</button>
+                <a href="#" class="proceed-btn poppins_300 sheen"><i class="bx bx-left-arrow-alt"></i> Previous</a>
+                <a href="#" class="proceed-btn poppins_300 sheen">Next <i class="bx bx-right-arrow-alt"></i></a>
               </div>
             </section>
           </div>

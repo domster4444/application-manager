@@ -4,6 +4,6 @@ for (let i = 0; i < document.getElementsByClassName("test-upload").length; i++) 
 
     document.getElementsByClassName("test-preview")[
       i
-    ].innerHTML = ` <p id='upload-success-msg' class='one-liner'>${e.target.files[0].name}</p> &nbsp; <b style="color: #0f5288">file uploaded successfully</b>`;
+    ].innerHTML = ` <p id='upload-success-msg' class='one-liner' style="color: #0f5288">${e.target.files[0].name}</p>`;
   });
 }
