@@ -41,6 +41,7 @@ input[type="number"] {
 }
 
 input {
+
   color: var(--primary-blue);
 }
 button {
@@ -2168,7 +2169,9 @@ input[type="file"]{
 
 /* ========================================== login screen  */
 
-.login-screen {
+.login-screen input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 .login-screen .primary-title {
