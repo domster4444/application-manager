@@ -2956,6 +2956,7 @@ input[type="file"]{
   border-collapse: collapse;
 }
 .table-btn-container {
+  margin-bottom: 1.5rem;
   display: flex;
   justify-content: flex-end;
 }
