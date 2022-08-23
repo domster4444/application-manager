@@ -909,6 +909,7 @@ display: flex;
 }
 
 .application-form-footer p {
+  text-align: left;
   color: var(--primary-orange);
 }
 /* proceed backward || proceed forward button for footer */
