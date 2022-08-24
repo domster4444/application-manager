@@ -445,7 +445,7 @@ nav.create-account_nav img {
 
 
 input[type=date]:invalid::-webkit-datetime-edit {
-  color: #8d8d8d;
+  color: #8d8d8d!important;
 }
 ::placeholder{
   color: #8d8d8d;
