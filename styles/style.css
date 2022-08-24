@@ -98,7 +98,16 @@ a{
   --secondary-navy:#012b9cc0;
   --extra-lighter-grey: rgb(240, 240, 240);
   --extra-light-grey:rgb(228, 228, 228);
+  --primary-pending:#F78A4E;
+  --primary-approved:#609E51;
+}
 
+
+.pending {
+color:  var(--primary-pending);
+}
+.approved {
+color : var(--primary-approved);
 }
 
 @media only screen and (max-width: 1400px) {
