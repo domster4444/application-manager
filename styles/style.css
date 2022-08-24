@@ -3409,3 +3409,61 @@ align-items: center;
   background-color:var(--extra-light-grey);
 
 }
+
+
+
+
+/* ===============learn more instruction section  */
+
+
+
+#learnmore-instruction-set {
+  overflow: hidden;
+  margin-top: 5rem;
+  padding  : 1rem 5rem; 
+  border : 1px solid var(--extra-light-grey);
+}
+#learnmore-instruction-set .title {
+  margin-top: 5rem;
+  color: var(--primary-black);
+}
+#learnmore-instruction-set p {
+  text-align: left;
+  margin: 1rem;
+  font-size: 1.6rem;
+}
+#learnmore-instruction-set  ul{
+  font-size: 1.5rem;
+}
+#learnmore-instruction-set  ul li {
+  margin: 1.75rem 0rem; 
+  
+}
+#learnmore-instruction-set  button {
+  background: transparent;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+#learnmore-instruction-set  .application-form-container{
+  text-align: left;
+}
+
+
+
+/* animation height grow animation for personal statement section */
+
+
+@keyframes slowlyIncreaseHeightTo100 {
+  0% {
+    height:  0%;
+  }
+  100% {
+    height: 50%;
+  }
+}
+
+
+.grow-height{
+  animation: slowlyIncreaseHeightTo100 0.75s ease-in-out;
+}
