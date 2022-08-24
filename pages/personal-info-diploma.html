@@ -79,20 +79,35 @@
               <!-- 1st input field row for student information -->
               <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" id="first-name" name="first-name" placeholder="First Name" type="text" />
+                  <input required class="poppins_400" id="firstname" name="firstname" placeholder="First Name" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="middlename" name="middlename" placeholder="Middle Name" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="lastname" name="lastname" placeholder="Last Name" type="text" />
                 </div>
               </div>
+
               <!-- 2nd input field row for student information -->
 
               <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" id="address" name="address" placeholder="Residental Address" type="text" />
+                  <input required class="poppins_400" id="province" name="province" placeholder="Province" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="district" name="district" placeholder="District" type="text" />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="municipality" name="municipality" placeholder="Municipality/VDC" type="email" />
+                </div>
+              </div>
+
+              <!-- 3rd input field row for student information -->
+
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
+                  <input required class="poppins_400" id="nationality" name="diploma_nationality" placeholder="Nationality" type="text" />
                 </div>
                 <div class="detail-col">
                   <input required class="poppins_400" id="phone" name="phone" placeholder="Phone Number" type="tel" minlength="6" maxlength="15" />
@@ -102,27 +117,24 @@
                 </div>
               </div>
 
-              <!--3rd input field row for student information -->
+              <!--4 input field row for student information -->
               <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
                   <h4 class="poppins_400 gender-heading">Gender :</h4>
                   <div class="gender-field poppins_400">
                     <label for="male">
                       <span> Male </span>
-                      <input name="gender" id="male" type="radio" />
+                      <input name="gender" id="male" value="male" type="radio" />
                     </label>
                     <label for="female">
                       <span> Female</span>
-                      <input name="gender" id="female" type="radio" />
+                      <input name="gender" id="female" value="female" type="radio" />
                     </label>
                     <label for="others">
                       <span> Others </span>
-                      <input name="gender" id="others" type="radio" />
+                      <input name="gender" id="others" value="others" type="radio" />
                     </label>
                   </div>
-                </div>
-                <div class="detail-col">
-                  <input required class="poppins_400" id="nationality" name="nationality" placeholder="Nationality" type="text" />
                 </div>
               </div>
             </section>
@@ -135,36 +147,57 @@
               <!-- 1st input field row for student information -->
               <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" id="first-name" name="first-name" placeholder="First Name" type="text" />
+                  <input required class="poppins_400" id="local_firstname" name="local_firstname" placeholder="First Name" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="middle-name" name="middle-name" placeholder="Middle Name" type="text" />
+                  <input required class="poppins_400" id="local_middlename" name="local_middlename" placeholder="Middle Name" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="last-name" name="last-name" placeholder="Last Name" type="text" />
+                  <input required class="poppins_400" id="local_lastname" name="local_lastname" placeholder="Last Name" type="text" />
                 </div>
               </div>
+
               <!-- 2nd input field row for student information -->
 
               <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" id="address" name="address" placeholder="Permanent Address" type="text" />
+                  <input required class="poppins_400" id="local_province" name="local_province" placeholder="Province" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="phone" name="phone" placeholder="Phone Number" type="tel" minlength="6" maxlength="15" />
+                  <input required class="poppins_400" id="local_district" name="local_district" placeholder="District" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="email" name="email" placeholder="Email Address" type="email" />
+                  <input required class="poppins_400" id="local_municipality" name="local_municipality" placeholder="Municipality/VDC" type="email" />
                 </div>
               </div>
 
-              <!--3rd input field row for student information -->
+              <!-- 3rd input field row for student information -->
+
               <div class="input-field-row" style="display: flex; justify-content: flex-start">
                 <div class="detail-col">
-                  <input required class="poppins_400" id="relation" name="relation" placeholder="Relation" type="text" />
+                  <input required class="poppins_400" id="local_relation" name="local_relation" placeholder="Relation" type="text" />
                 </div>
                 <div class="detail-col">
-                  <input required class="poppins_400" id="nationality" name="nationality" placeholder="Nationality" type="text" />
+                  <input
+                    required
+                    class="poppins_400"
+                    id="local_cell"
+                    name="local_cell"
+                    placeholder="Phone Number"
+                    type="tel"
+                    minlength="6"
+                    maxlength="15"
+                  />
+                </div>
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_email" name="local_email" placeholder="Email Address" type="email" />
+                </div>
+              </div>
+
+              <!--4th input field row for student information -->
+              <div class="input-field-row" style="display: flex; justify-content: flex-start">
+                <div class="detail-col">
+                  <input required class="poppins_400" id="local_nationality" name="local_nationality" placeholder="Nationality" type="text" />
                 </div>
               </div>
             </section>
