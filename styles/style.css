@@ -36,9 +36,10 @@ input::-webkit-inner-spin-button {
 
 
 /* remove unnecessary date prefix  */
-input::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-text {
+
+.input-year::-webkit-datetime-edit-month-field,
+.input-year::-webkit-datetime-edit-day-field,
+.input-year::-webkit-datetime-edit-text {
   display:none;
 }
 
@@ -2933,6 +2934,11 @@ color:var(--primary-black);
   /* background-color: red; */
   width: 100%;
 }
+.lists-detail-container .status-container button.primary-btn {
+  padding:.25rem 1.25rem;
+  font-size:1.5rem ;
+  font-weight: bolder;
+}
 .lists-detail-container .status-container ul {
   width: 100%;
   list-style: none;
@@ -2941,13 +2947,27 @@ color:var(--primary-black);
   align-items: center;
 }
 
+.lists-detail-container .status-container li input {
+  width: 50%;
+  outline:none;
+}
 .lists-detail-container .status-container li {
+  display: flex;
+  
+  align-items: center;
   margin-top: 1rem;
   padding: 1rem 2rem;
   width: 100%;
   background: rgba(128, 181, 216, 0.2);
   display: flex;
   justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 500px){
+  .lists-detail-container .status-container li {
+  flex-wrap: wrap;
+  }
 }
 
 .lists-detail-container .status-container li h5 {
@@ -3492,3 +3512,15 @@ align-items: center;
 /* ========= provide more width to form card after 1400  */
 
 
+
+
+.selection-input-field{
+  outline: none;
+  padding: 1rem;
+}
+@media only screen and (max-width:500px){
+  .selection-input-field{
+
+    width: 100%;
+  }
+}

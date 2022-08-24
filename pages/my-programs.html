@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- For icons -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- global style sheet -->
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Programs</title>
+    <meta name="author" content="Digital Media Team" />
+  </head>
+  <body>
+    <div id="account">
+      <img id="ellipse-illustrator" src="../assets/illustrator/ellipse.png" alt="ellipse illustrator" />
+
+      <main>
+        <div class="secondary-container">
+          <header class="secondary-toolbar secondary-block">
+            <nav class="create-account_nav">
+              <div class="left-nav">
+                <img src="../assets/images/logo/deerwalk-logo.png" alt="company logo" />
+              </div>
+              <div class="right-nav">
+                <div class="dropdown-action" onclick="dropDown(this)">
+                  <span class="caret-down">
+                    <i class="bx bxs-user-circle"></i>
+                  </span>
+                  <div class="poppins_400">pradeepti201@gmail.com</div>
+                  <span class="caret-down">
+                    <i class="bx bx-chevron-down"></i>
+                  </span>
+                </div>
+                <div class="dropdown-content">
+                  <ul>
+                    <li class="poppins_400">
+                      <a href="#"> Change Password </a>
+                    </li>
+                    <li class="poppins_400">
+                      <a href="#">
+                        <i class="bx bx-log-out"></i>
+
+                        Logout
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
+        </div>
+
+        <!-- user dashboard body starts here  -->
+        <section class="secondary-container">
+          <div class="secondary-block">
+            <div class="dashboard-body">
+              <div class="db-secondary dbLink-container">
+                <div class="icon-block dbLink">
+                  <a href="http://127.0.0.1:5500/pages/user-dashboard.html">
+                    <i class="bx bx-home-alt"></i>
+                  </a>
+                </div>
+                <div class="icon-block dbLink dbLink--active">
+                  <a href="http://127.0.0.1:5500/pages/form-selection.html">
+                    <i class="bx bx-edit"></i>
+                  </a>
+                </div>
+                <div class="icon-block dbLink">
+                  <a href="http://127.0.0.1:5500/pages/notice.html">
+                    <i class="bx bx-wifi"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="db-primary">
+                <h2 class="db-heading poppins_600">My Programs</h2>
+
+                <div class="lists-detail-container">
+                  <div class="list-detail-block">
+                    <div class="heading">
+                      <!-- <h1 class="poppins_500">B.Sc.CSIT</h1> -->
+
+                      <!-- <button>Reapply</button> -->
+
+                      <!-- select input -->
+                      <select name="program" id="program" class="poppins_500 selection-input-field">
+                        <option value="Bachelor's of Computer Application -DWIT2022 -322">Bachelor's of Computer Application -DWIT2022 -322</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="status-container">
+                    <ul>
+                      <li>
+                        <h5 class="poppins_400">Application status</h5>
+                        <h5 class="poppins_400">Pending</h5>
+                      </li>
+                      <li>
+                        <h5 class="poppins_400">Payment status</h5>
+                        <h5 class="poppins_400">Approved</h5>
+                      </li>
+                      <li>
+                        <h5 class="poppins_400">Choose exam date</h5>
+
+                        <input type="date" />
+
+                        <h5 class="poppins_400">
+                          <button class="primary-btn poppins_500">Apply</button>
+                        </h5>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- user dashboard body ends here -->
+      </main>
+    </div>
+    <script src="../assets/scripts/activate-db-links.js"></script>
+    <script src="../assets/scripts/dropdown-nav.js"></script>
+  </body>
+</html>
