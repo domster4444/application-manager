@@ -601,12 +601,20 @@ input[type=date]:invalid::-webkit-datetime-edit {
 }
 
 .create-account_form .submit-btn {
-  bottom: 0;
-  right: 0;
-  position: absolute;
+  /* bottom: 0; */
+  /* right: 0; */
+  /* position: absolute; */
   width:34%;
 }
 
+
+
+@media only screen and (max-width: 900px){
+  .form-division_container label{
+
+    flex-wrap: wrap;
+  }
+}
 
 
 @media only screen and (min-width: 900px) {
