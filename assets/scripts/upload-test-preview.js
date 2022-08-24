@@ -1,4 +1,6 @@
 for (let i = 0; i < document.getElementsByClassName("test-upload").length; i++) {
+  console.log("found node elements =", document.getElementsByClassName("test-upload")[i]);
+
   document.getElementsByClassName("test-upload")[i].addEventListener("change", function (e) {
     console.log(e.target.files[0].name);
 

@@ -30,14 +30,28 @@
                 <img src="../assets/images/logo/deerwalk-logo.png" alt="company logo" />
               </div>
               <div class="right-nav">
-                <h4 class="poppins_500">Pradeepti 239@gmail.com</h4>
-                <div class="nav_btn-container">
-                  <button class="tertiary-btn poppins_400">Change Password</button>
-                  <button class="primary-btn poppins_400">
-                    Logout
+                <div class="dropdown-action" onclick="dropDown(this)">
+                  <span class="caret-down">
+                    <i class="bx bxs-user-circle"></i>
+                  </span>
+                  <div class="poppins_400">pradeepti201@gmail.com</div>
+                  <span class="caret-down">
+                    <i class="bx bx-chevron-down"></i>
+                  </span>
+                </div>
+                <div class="dropdown-content">
+                  <ul>
+                    <li class="poppins_400">
+                      <a href="#"> Change Password </a>
+                    </li>
+                    <li class="poppins_400">
+                      <a href="#">
+                        <i class="bx bx-log-out"></i>
 
-                    <i class="bx bx-log-out"></i>
-                  </button>
+                        Logout
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </nav>
@@ -119,5 +133,6 @@
       </main>
     </div>
     <script src="../assets/scripts/activate-db-links.js"></script>
+    <script src="../assets/scripts/dropdown-nav.js"></script>
   </body>
 </html>
