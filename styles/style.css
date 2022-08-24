@@ -108,7 +108,7 @@ a{
 
 @media only screen and (max-width: 900px) {
   :root {
-    font-size: 9px !important;
+    font-size: 9.5px !important;
   }
 }
 
@@ -3475,3 +3475,9 @@ align-items: center;
 .grow-height{
   animation: slowlyIncreaseHeightTo100 0.75s ease-in-out;
 }
+
+
+
+/* ========= provide more width to form card after 1400  */
+
+

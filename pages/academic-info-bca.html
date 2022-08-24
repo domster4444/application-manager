@@ -131,13 +131,13 @@
                         <input type="text" name="subject" placeholder="Subject name" />
                       </td>
                       <td>
-                        <input type="text" name="theory" placeholder="Theory marks" />
+                        <input type="number" name="theory" placeholder="Theory marks" />
                       </td>
                       <td>
-                        <input type="text" name="username" name="practical" placeholder="Practical marks" />
+                        <input type="number" name="username" name="practical" placeholder="Practical marks" />
                       </td>
                       <td>
-                        <input type="text" name="username" name="aggregate" placeholder="Aggregate marks" />
+                        <input type="number" name="username" name="aggregate" placeholder="Aggregate marks" />
                       </td>
                       <td>
                         <button class="table-btn" onclick="removeIndividualRow('table1',this)">
@@ -188,13 +188,13 @@
                         <input type="text" name="subject" placeholder="Subject name" />
                       </td>
                       <td>
-                        <input type="text" name="theory" placeholder="Theory marks" />
+                        <input type="number" name="theory" placeholder="Theory marks" />
                       </td>
                       <td>
-                        <input type="text" name="username" name="practical" placeholder="Practical marks" />
+                        <input type="number" name="username" name="practical" placeholder="Practical marks" />
                       </td>
                       <td>
-                        <input type="text" name="username" name="aggregate" placeholder="Aggregate marks" />
+                        <input type="number" name="username" name="aggregate" placeholder="Aggregate marks" />
                       </td>
                       <td>
                         <button class="table-btn" onclick="removeIndividualRow('table2',this)">
@@ -245,9 +245,9 @@
           cell1.innerHTML = `<div class='table-sn-number poppins_400 '> ${table.rows.length - 1} </div>`;
 
           cell2.innerHTML = "<input type='text' name='subject' placeholder='Subject name'  />";
-          cell3.innerHTML = "<input type='text' name='theory' placeholder='Theory marks'  />";
-          cell4.innerHTML = "<input type='text' name='practical' placeholder='Practical marks'  />";
-          cell5.innerHTML = "<input type='text' name='aggregate' placeholder='Aggregate marks'  />";
+          cell3.innerHTML = "<input type='number' name='theory' placeholder='Theory marks'  />";
+          cell4.innerHTML = "<input type='number' name='practical' placeholder='Practical marks'  />";
+          cell5.innerHTML = "<input type='number' name='aggregate' placeholder='Aggregate marks'  />";
 
           // insert remove individual row button
           var cell6 = row.insertCell(5);
@@ -267,15 +267,15 @@
       function printTable(tableid) {
         var table = document.getElementsByClassName(tableid)[0];
 
-        console.log("no of rows in table = including heading", table.rows.length);
-        console.log("no of rows in table excluding heading heading", table.rows.length - 1);
+        // console.log("no of rows in table = including heading", table.rows.length);
+        // console.log("no of rows in table excluding heading heading", table.rows.length - 1);
 
         // print values of input fields
         for (var i = 1; i < table.rows.length; i++) {
-          console.log("first name of row", i, "=", table.rows[i].cells[1].children[0].value);
-          console.log("last name of row", i, "=", table.rows[i].cells[2].children[0].value);
-          console.log("username of row", i, "=", table.rows[i].cells[3].children[0].value);
-          console.log("username of row", i, "=", table.rows[i].cells[4].children[0].value);
+          // console.log("first name of row", i, "=", table.rows[i].cells[1].children[0].value);
+          // console.log("last name of row", i, "=", table.rows[i].cells[2].children[0].value);
+          // console.log("username of row", i, "=", table.rows[i].cells[3].children[0].value);
+          // console.log("username of row", i, "=", table.rows[i].cells[4].children[0].value);
         }
       }
 
@@ -283,6 +283,16 @@
       function removeIndividualRow(tableid, row) {
         var table = document.getElementsByClassName(tableid)[0];
         table.deleteRow(row.parentNode.parentNode.rowIndex);
+
+        overrideSN(tableid);
+      }
+
+      // override ascending numbers in sn field of table
+      function overrideSN(tableid) {
+        var table = document.getElementsByClassName(tableid)[0];
+        for (var i = 1; i < table.rows.length; i++) {
+          table.rows[i].cells[0].innerHTML = `<div class='table-sn-number poppins_400 '> ${i} </div>`;
+        }
       }
     </script>
 
