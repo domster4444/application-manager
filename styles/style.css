@@ -92,6 +92,7 @@ a{
  --secondary-cyan:#d7ffb8;
   --primary-yellow: #e1da5e;
   --primary-cyan: #c4fb99; /* footer btn bg for bca appication screen */
+  --primary-grey: #8D8D8D; /* footer btn bg for bca appication screen */
   --primary-navy:#001D6E;
   --secondary-navy:#012b9cc0;
   --extra-lighter-grey: rgb(240, 240, 240);
@@ -603,11 +604,15 @@ input[type=date]:invalid::-webkit-datetime-edit {
   bottom: 0;
   right: 0;
   position: absolute;
-  width: 40%;
+  width:34%;
 }
+
+
 
 @media only screen and (min-width: 900px) {
   .create-account_form .submit-btn {
+    right : 1rem;
+    bottom: 1rem;
     margin: 0rem 0.25rem 0.25rem 0rem;
   }
 }
@@ -2331,9 +2336,7 @@ input[type="file"]{
   
 }
 
-.login-screen .block--left {
-  /* background-color: var(--primary-blue); */
-}
+
 .login-screen .block--left p span {
   color: var(--primary-blue);
 
@@ -2352,14 +2355,27 @@ input[type="file"]{
   align-items: center;
 }
 
-.login-screen .block--right form {
-}
-.login-screen .block--right p {
+
+.login-screen .block--right  {
   color: rgb(156, 156, 156);
   /* font size for right card */
   font-size: 1.9rem;
   line-height: 1.4;
   margin-bottom: 1rem;
+}
+
+
+.login-screen .block--right .footer-paragraph {
+  margin-top: 1rem;
+  margin-top: 1.5rem;
+}
+.login-screen .block--right .footer-paragraph  a  {
+  display: inline;
+}
+.login-screen .block--right .footer-paragraph, .login-screen .block--right a  {
+  color : var(--primary-grey);
+  font-size: 1.8rem;
+  
 }
 
 @media only screen and (max-height: 880px){
@@ -2374,24 +2390,13 @@ input[type="file"]{
     font-size: 1.6rem;
   }
 }
-.login-screen .block--right .footer-paragraph  {
-  margin-top: 1.5rem;
-}
-.login-screen .block--right .footer-paragraph  a  {
-  display: inline;
-}
-.login-screen .block--right .footer-paragraph, .login-screen .block--right a  {
-  
-  font-size: 1.8rem;
-  
-}
+
 .login-screen .block--right a  {
 color:var(--primary-blue);
 
 }
 .login-screen .block--right p {
 color:var(--primary-black);
-
 }
 .login-screen .block--right .submit-btn-container {
   
@@ -2480,7 +2485,7 @@ color:var(--primary-black);
   flex-direction: row;
   background-color: var(--primary-white);
   min-height: 50rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .db-secondary .icon-block-container {
@@ -2562,6 +2567,7 @@ color:var(--primary-black);
   width: 70%;
   transform: translateX(-50%);
   margin-left: 50%;
+  margin-top: 10rem;
 }
 
 .db-primary .welcome-sub-title {
