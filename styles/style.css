@@ -43,6 +43,15 @@ input::-webkit-inner-spin-button {
   display:none;
 }
 
+
+
+
+input[type=date]{
+padding: 1rem;
+font-size: 1.6rem;
+}
+
+
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
@@ -3533,3 +3542,9 @@ align-items: center;
     width: 100%;
   }
 }
+
+
+/* 
+input:placeholder-shown{
+  text-transform: capitalize;
+} */
