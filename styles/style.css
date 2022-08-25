@@ -43,6 +43,15 @@ input::-webkit-inner-spin-button {
   display:none;
 }
 
+
+
+
+input[type=date]{
+padding: 1rem;
+font-size: 1.6rem;
+}
+
+
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
@@ -333,7 +342,6 @@ nav.create-account_nav img {
   flex-direction: column;
 }
 .form-division_container .right_division {
-  padding-top: 1rem;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -3351,7 +3359,6 @@ margin-top: 1rem;
 }
 .dropdown-action {
   font-size: 1.8rem;
-
  width: fit-content;
   position:relative;
   background-color: var(--primary-blue);
@@ -3396,6 +3403,7 @@ margin-top: 1rem;
 }
 
 .dropdown-content {
+  z-index: 99;
   margin-top: 1rem;
   font-size: 1.8rem;
   width: 28rem;
@@ -3533,3 +3541,9 @@ align-items: center;
     width: 100%;
   }
 }
+
+
+/* 
+input:placeholder-shown{
+  text-transform: capitalize;
+} */

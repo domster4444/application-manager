@@ -37,13 +37,15 @@
 
       <main>
         <nav class="create-account_nav">
-          <img src="../assets/images/logo/deerwalk-logo.png" alt="company logo" />
+          <a href="http://127.0.0.1:5500/pages/user-dashboard.html">
+            <img src="../assets/images/logo/deerwalk-logo.png" alt="company logo" />
+          </a>
         </nav>
 
         <section class="form_container">
           <div class="create-account_form">
             <header>
-              <h2 class="poppins_600">Application Form For CSIT</h2>
+              <h2 class="poppins_600">Application Form for CSIT</h2>
             </header>
             <section class="timeline">
               <div class="timeline-block status-container">
@@ -108,7 +110,7 @@
                 <h4 class="declaration-title poppins_600">Rules and Regulations</h4>
 
                 <p class="poppins_400 declaration-paragraph">
-                  I fully understand that DWIT College has the final say on any kind of conflicts/disputes related to admission and will regard it's
+                  I fully understand that DWIT College has the final say on any kind of conflicts / disputes related to admission and will regard its
                   decision as full and final.
                 </p>
 
@@ -120,10 +122,11 @@
 
                 <div class="declaration-agreen-container">
                   <div class="checkbox-container">
-                    <input required type="checkbox" name="checkbox" />
+                    <input id="consent-box" required type="checkbox" name="checkbox" />
                   </div>
-
-                  <p class="declaration-agreen-text poppins_500">I fully agree with the above statement and rules and regulations</p>
+                  <label for="consent-box">
+                    <p class="declaration-agreen-text poppins_500">I fully agree with the above statement and rules and regulations.</p>
+                  </label>
                 </div>
 
                 <div class="two-col-detail-row-section">
@@ -133,10 +136,10 @@
                   <div class="column-container">
                     <div class="detail-col">
                       <div class="input-field-container">
-                        <label class="poppins_400" for=""> Student Signature </label>
+                        <label class="poppins_400" for=""> Student's Signature </label>
 
                         <div class="upload-file-container">
-                          <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+                          <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> Browse </a> </span>
 
                           <div class="file-input-container">
                             <input class="test-upload" required type="file" />
@@ -149,7 +152,7 @@
                       <div class="input-field-container">
                         <label class="poppins_400" for=""> Guardian Signature </label>
                         <div class="upload-file-container">
-                          <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> browse </a> </span>
+                          <span class="poppins_400 test-preview"> Drag & Drop your file or &nbsp; <a href="#"> Browse </a> </span>
 
                           <div class="file-input-container">
                             <input class="test-upload" required type="file" />
