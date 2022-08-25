@@ -342,7 +342,6 @@ nav.create-account_nav img {
   flex-direction: column;
 }
 .form-division_container .right_division {
-  padding-top: 1rem;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
