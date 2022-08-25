@@ -3360,7 +3360,6 @@ margin-top: 1rem;
 }
 .dropdown-action {
   font-size: 1.8rem;
-
  width: fit-content;
   position:relative;
   background-color: var(--primary-blue);
@@ -3405,6 +3404,7 @@ margin-top: 1rem;
 }
 
 .dropdown-content {
+  z-index: 99;
   margin-top: 1rem;
   font-size: 1.8rem;
   width: 28rem;
