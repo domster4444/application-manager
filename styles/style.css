@@ -3359,7 +3359,7 @@ margin-top: 1rem;
 }
 .dropdown-action {
   font-size: 1.8rem;
- width: fit-content;
+  width: fit-content;
   position:relative;
   background-color: var(--primary-blue);
   color: white;
@@ -3375,6 +3375,12 @@ margin-top: 1rem;
   -ms-user-select: none;
 }
 
+
+@media only screen and (max-width: 525px){
+  .dropdown-action {
+    margin-top: 1rem;
+  }
+}
 .dropdown-action:hover {
   background-color: var(--primary-blue-light);
 }
@@ -3533,12 +3539,12 @@ align-items: center;
 
 .selection-input-field{
   width: 100%;
+  text-align: center;
   outline: none;
   padding: 1rem;
 }
 @media only screen and (max-width:500px){
   .selection-input-field{
-
     width: 100%;
   }
 }
@@ -3548,3 +3554,30 @@ align-items: center;
 input:placeholder-shown{
   text-transform: capitalize;
 } */
+
+
+/* ========================my program final  screen syles */
+
+
+.status-container .two-col-container{
+  /* display: flex; */
+  justify-content: space-between;
+  width: 100%;
+}
+.status-container .two-col-container li{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+@media only screen and (min-width:500px){
+  
+  .status-container .two-col-container{
+    display: flex;
+  }
+  .status-container .two-col-container li{
+    width: 49%;
+  }
+}
