@@ -3532,6 +3532,7 @@ align-items: center;
 
 
 .selection-input-field{
+  width: 100%;
   outline: none;
   padding: 1rem;
 }
