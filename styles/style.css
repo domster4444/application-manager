@@ -2378,7 +2378,7 @@ input[type="file"]{
 .login-screen .block--right {
   background-color: var(--primary-white);
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 
@@ -3579,5 +3579,59 @@ input:placeholder-shown{
   }
   .status-container .two-col-container li{
     width: 49%;
+  }
+}
+
+
+
+/* google auth button  */
+ 
+ #my-signup2,#my-signin2 {
+   width: 100%;
+   margin-top:1.5rem;
+  } 
+
+
+.block--right form {
+   width : 100%;
+}
+
+
+.abcRioButtonContentWrapper , .abcRioButton  {
+width: 100% !important;
+}
+
+
+
+
+/* === signup  google auth button    */
+
+
+.signup-btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+.signup-btn-container #my-signup2{
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 770px ){
+  
+  .signup-btn-container #my-signup2{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px ){
+  .signup-btn-container #my-signup2{
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 300px ){
+  .signup-btn-container #my-signup2{
+    width: 97%;
   }
 }
