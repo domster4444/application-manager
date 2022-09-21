@@ -2531,6 +2531,18 @@ color:var(--primary-black);
   padding: 0.25rem;
   margin: 1rem;
 }
+.notice-alert {
+  position: relative;
+}
+.notice-alert:after {
+  content: "⬤";
+  top: -.5rem;
+  right: 0;
+  color: var(--primary-orange);
+  position: absolute;
+  display: block;
+  padding-bottom: 100%;
+}
 .db-secondary .icon-block:hover {
   background: rgba(128, 181, 216, 0.2);
 }
