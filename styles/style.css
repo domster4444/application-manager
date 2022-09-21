@@ -3559,6 +3559,18 @@ input:placeholder-shown{
 /* ========================my program final  screen syles */
 
 
+
+#programs-date-selection{
+  width: 20rem;
+  height: 3.5rem;
+}
+
+#programs-date-selection option{ 
+font-size: 1.8rem;
+padding: 1rem;
+}
+
+
 .status-container .two-col-container{
   /* display: flex; */
   justify-content: space-between;
@@ -3584,22 +3596,67 @@ input:placeholder-shown{
 
 
 
-/* google auth button  */
- 
- #my-signup2,#my-signin2 {
-   width: 100%;
-   margin-top:1.5rem;
-  } 
-
 
 .block--right form {
    width : 100%;
 }
 
 
-.abcRioButtonContentWrapper , .abcRioButton  {
-width: 100% !important;
+
+
+
+
+
+
+/* google auth btn styles  */
+
+
+
+
+.login-with-google-btn:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
 }
+
+.login-with-google-btn:active {
+  background-color: #eeeeee;
+}
+.login-with-google-btn:focus {
+  outline: none;
+  box-shadow: 
+  0 -1px 0 rgba(0, 0, 0, .04),
+  0 2px 4px rgba(0, 0, 0, .25),
+  0 0 0 3px #c8dafc;
+}
+/* .login-with-google-btn:disabled {
+  filter: grayscale(100%);
+  background-color: #ebebeb;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  cursor: not-allowed;
+} */
+.login-with-google-btn {
+  transition: background-color .3s, box-shadow .3s;
+  padding: 15px 16px 15px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  color: var(--primary-black);
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 15px;
+  background-size: 2.5rem;
+  width: 100%;
+  margin-top: 1.5rem; 
+
+}
+
+
+
+
+
 
 
 
@@ -3612,26 +3669,34 @@ width: 100% !important;
   justify-content: center;
 }
 
-.signup-btn-container #my-signup2{
+.signup-btn-container button{
   width: 50%;
 }
 
 
 @media only screen and (max-width: 770px ){
   
-  .signup-btn-container #my-signup2{
+  .signup-btn-container button{
     width: 80%;
   }
 }
 
 @media only screen and (max-width: 500px ){
-  .signup-btn-container #my-signup2{
+  .signup-btn-container button{
     width: 95%;
   }
 }
 
 @media only screen and (max-width: 300px ){
-  .signup-btn-container #my-signup2{
+  .signup-btn-container button{
     width: 97%;
   }
 }
+
+
+
+
+
+
+
+
