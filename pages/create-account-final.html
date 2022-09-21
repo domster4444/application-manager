@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com" />
-
     <!-- For icons -->
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
 
@@ -38,7 +36,9 @@
 
             <p class="poppins_400">Please provide valid information to proceed ahead.</p>
             <div class="signup-btn-container">
-              <div id="my-signup2"></div>
+              <!-- google sign in btn starts here  -->
+              <button type="button" class="login-with-google-btn">Sign in with Google</button>
+              <!-- google sign in btn ends here  -->
             </div>
 
             <footer>
@@ -50,43 +50,5 @@
         </section>
       </main>
     </div>
-
-    <script>
-      function onSuccess(googleUser) {
-        console.log("Logged in as: " + googleUser.getBasicProfile().getName());
-      }
-      function onFailure(error) {
-        console.log(error);
-      }
-      function renderButton() {
-        gapi.signin2.render("my-signup2", {
-          scope: "profile email",
-          width: 240,
-          height: 50,
-          longtitle: true,
-          theme: "dark",
-          onsuccess: onSignUpSuccess,
-          onfailure: onSignUpFailure,
-        });
-      }
-    </script>
-
-    <!-- change inner text of google  on load -->
-    <script>
-      window.addEventListener("load", function () {
-        const googleAuthBtnNode = document.getElementsByTagName("span")[1];
-        googleAuthBtnNode.innerHTML = "Sign up with Google";
-      });
-
-      const onSignUpSuccess = (googleUser) => {
-        console.log("Logged in as: " + googleUser.getBasicProfile().getName());
-      };
-      const onSignUpFailure = (error) => {
-        console.log("error is = 🅾️", error);
-        alert("SIGNUP-FAILED failed  error logged in console");
-      };
-    </script>
-
-    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
   </body>
 </html>
